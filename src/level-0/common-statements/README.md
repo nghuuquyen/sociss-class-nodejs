@@ -2,11 +2,11 @@
 
 Trong ví dụ này chỉ ra các câu lệnh cơ bản hay gặp trong lập trình Node JS.
 
-## Vòng lặp for
+## I. Vòng lặp for
 
 Trong Node JS vòng lặp có thể được khai báo như sau.
 
-```
+```javascript
 for(var i=0; i<= 5; i++) {
   console.log(i);
 }
@@ -16,7 +16,7 @@ for(var i=0; i<= 5; i++) {
 Ngoài ra con có nhiều kiểu khác như là :
 
 
-#### Loop in
+#### 1. Loop in
 
 ```javascript
 var arrays = ['A', 'B', 'C', 'D', 'E'];
@@ -29,7 +29,7 @@ for(var item in arrays) {
 Đây đơn giản là một biến thể của vòng for loop ban đầu. Lúc này chúng ta không cần tăng biến điếm nữa, mặc định `item` sẽ giữ giá trị index của mảng, vì vậy khi cần truy xuất giá trị một phần tử của mảng ta đơn giản dùng `arrays[item]`
 
 
-#### For loop
+#### 2. For loop
 
 ```javascript
 arrays.forEach(function onEachItem(_item) {
@@ -52,7 +52,7 @@ console.log('It will call before loop print console done.');
 
 Theo suy nghĩ thông thường thì lệnh `console.log` thứ hai sẽ in ra sau, tuy nhiên như nói trên hàm forEach là bất đồng bộ nên nó sẽ chạy ra trước khi hàm forEach in xong giá trị ra console.
 
-# Câu lệnh If Else
+# II. Câu lệnh If Else
 
 ```javascript
 function isMorning(time) {
@@ -68,7 +68,7 @@ function isMorning(time) {
 }
 ```
 
-# Câu lệnh Switch Case
+# III. Câu lệnh Switch Case
 
 Sử dụng để thực hiện một tập lệnh rẽ nhánh dựa trên một biểu thức đầu vào.
 
@@ -105,8 +105,8 @@ Ví dụ: Dưới đây, mình sẽ định nghĩa một object đơn giản v�
 2. Chuyển đổi từ chuỗi JSON sang Object.
 3. Bắt ngoại lệ khi đầu vào của việc chuyển đổi là không hợp lệ.
 
-`Trong khi chuyển đổi qua lại JSON , bạn nên nhớ try-catch vì rất dễ xảy ra
-lỗi gây sập chương trình.`
+> Trong khi chuyển đổi qua lại JSON , bạn nên nhớ try-catch vì rất dễ xảy ra
+> lỗi gây sập chương trình.
 
 
 ```javascript
