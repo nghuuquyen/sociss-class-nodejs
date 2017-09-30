@@ -1,4 +1,4 @@
-#common-statements
+# common-statements
 
 Trong ví dụ này chỉ ra các câu lệnh cơ bản hay gặp trong lập trình Node JS.
 
@@ -17,7 +17,8 @@ Ngoài ra con có nhiều kiểu khác như là :
 
 
 #### Loop in
-```
+
+```javascript
 var arrays = ['A', 'B', 'C', 'D', 'E'];
 
 for(var item in arrays) {
@@ -30,7 +31,7 @@ for(var item in arrays) {
 
 #### For loop
 
-```
+```javascript
 arrays.forEach(function onEachItem(_item) {
   console.log(_item);
 });
@@ -42,7 +43,7 @@ Chú ý: `forEach` là một hàm bất đồng bộ, nghĩa là nó không theo
 
 Ví dụ:
 
-```
+```javascript
 arrays.forEach(function onEachItem(_item) {
   console.log(_item);
 });
@@ -53,7 +54,7 @@ Theo suy nghĩ thông thường thì lệnh `console.log` thứ hai sẽ in ra s
 
 # Câu lệnh If Else
 
-```
+```javascript
 function isMorning(time) {
 
   if(!time) return false;
@@ -71,7 +72,7 @@ function isMorning(time) {
 
 Sử dụng để thực hiện một tập lệnh rẽ nhánh dựa trên một biểu thức đầu vào.
 
-```
+```javascript
 switch (time) {
   case 'morning': {
     console.log('Good Morning.');
@@ -108,7 +109,7 @@ Ví dụ: Dưới đây, mình sẽ định nghĩa một object đơn giản v�
 lỗi gây sập chương trình.`
 
 
-```
+```javascript
 // JS object define.
 var object = {
   name : 'Person A',
