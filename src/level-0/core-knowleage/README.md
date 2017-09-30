@@ -101,3 +101,7 @@ var user = {                                   // Object
 
 var array = ['Happy', 'Learning', 'Node JS'];  // Array
 ```
+
+Tương ứng với mỗi kiểu dữ liệu sẽ có một số thao tác cơ bản.
+
+### 2.1 Kiểu dữ liệu đối tượng Object
