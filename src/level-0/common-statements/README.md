@@ -95,7 +95,7 @@ switch (time) {
 }
 ```
 
-# Thao tác với JSON
+# IV. Thao tác với JSON
 
 Trong Node JS, làm việc với dữ liệu định dạng JSON là việc thường xuyên gặp. Như là xử lý dữ liệu trả về từ API hay việc làm việc với Cơ sở dữ liệu Mongo DB.
 
