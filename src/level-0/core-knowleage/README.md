@@ -758,7 +758,7 @@ try {
 Nhưng vậy qua bài học này Quyền đã giới thiệu cho các bạn sơ qua về những kiến thức
 thường gặp khi làm việc với ngôn ngữ lập trình JavaScript. Bao gồm cấu trúc chương trình, các kiểu dữ liệu và các thao tác trên từng kiểu dữ liệu.
 
-Ngoài ra các bạn còn cần nắm thêm các cấu trúc lệnh cơ bản của JS như vòng lặp(for, do while, while), các lệnh rẽ nhánh (Switch-case, if-else) để có thểm thực hiện các thuật toán trên dữ liệu.
+Ngoài ra các bạn còn cần nắm thêm các cấu trúc lệnh cơ bản của JS như vòng lặp(for, do while, while), các lệnh rẽ nhánh (Switch-case, if-else) để có thể thực hiện các thuật toán trên dữ liệu.
 
 Đà Nẵng, Ngày 1 tháng 10 năm 2017.
 
