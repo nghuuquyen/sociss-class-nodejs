@@ -618,9 +618,6 @@ Thật kinh khủng nếu phải đọc đoạn code trên đúng không nào, t
 
 ## Các cấu trúc câu lệnh thường gặp
 
-
-# common-statements
-
 Trong ví dụ này chỉ ra các câu lệnh cơ bản hay gặp trong lập trình Node JS.
 
 ## I. Vòng lặp for
