@@ -169,14 +169,14 @@ var _message = 'It\'s 7 o\'clock.';
 
 #### 2.1.2 Các thuộc tính và phương thức hay dùng trên chuỗi
 
-*1. Lấy độ dài chuỗi.*
+**1. Lấy độ dài chuỗi.**
 
 ```javascript
 var _string = 'THIS IS STRING';
 _string.length // Get string length.
 ```
 
-*2. Viết thường hoặc viết hoa tất cả.*
+**2. Viết thường hoặc viết hoa tất cả.**
 
 ```javascript
 var _string = 'THIS IS STRING';
@@ -184,7 +184,7 @@ var a = _string.toLowerCase(); // a = 'this is string'
 var b = _string.toUpperCase(); // b = 'THIS IS STRING'
 ```
 
-*3. Cắt bỏ ký tự trống hai đầu.*
+**3. Cắt bỏ ký tự trống hai đầu.**
 
 Phương thức này được dùng thường xuyên để  xử lý chuỗi vào, tránh bị dư thừa ký
 tự trống hai đầu.
@@ -207,7 +207,7 @@ var _number = 150;
 #### 2.2.2 Đối tượnng Math để thao tác trên số.
 trong JS Math là một biến Global các bạn có thể dùng luôn mà không cần khai báo.
 
-*1. Làm tròn số.*
+**1. Làm tròn số.**
 
 Để làm tròn số thì trong JS có hỗ trợ 3 kiểu, làm tròn gần nhất (round), làm tròn
 lên (ceil) và làm tròn xuống (floor).
@@ -226,12 +226,12 @@ Math.floor(4.7);    // trả về 4
 Math.ceil(4.4);     // trả về 5
 ```
 
-*2. Tính trị tuyệt đối*
+**2. Tính trị tuyệt đối**
 
 ```javascript
 Math.abs(-5); // trả về 5
 ```
-*3. Tính sin và cos*
+**3. Tính sin và cos**
 
 hàm sin và cos nhận và giá trị radians, nếu bạn muốn dùng bằng giá trị độ, thì
 đơn giản là nhân cho số PI rồi chia cho 180.
@@ -240,18 +240,18 @@ hàm sin và cos nhận và giá trị radians, nếu bạn muốn dùng bằng 
 Math.sin(90 * Math.PI / 180);     // trả về 1 (Sin góc 90 độ)
 ```
 
-*4. Tính giá trị mũ (x mũ y )*
+**4. Tính giá trị mũ (x mũ y )**
 
 ```javascript
 Math.pow(8, 2);      // trả về 64 vì là 8 mũ 2
 ```
 
-*5. Tính giá trị căn bật hai*
+**5. Tính giá trị căn bật hai**
 
 ```javascript
 Math.sqrt(64);      // trả về 8
 ```
-*6. Lấy giá trị ngẫu nhiên.*
+**6. Lấy giá trị ngẫu nhiên.**
 Hàm random() sẽ trả về ngẫu nhiên một giá trị trong khoảng từ 0 đến 1.
 Ví dụ để lấy ngẫu nhiên một số trong khoảng từ 0 đến 1000 thì có thể làm như sau.
 
@@ -277,13 +277,13 @@ var _oArray = [ // Khai báo một mảng đối tượng.
 
 #### 2.2.2 các thuộc tính và phương thức thao tác với mảng.
 
-*1. Lấy độ dài mảng*
+**1. Lấy độ dài mảng**
 
 ```javascript
 var array = [1,2,3];
 array.length // 3
 ```
-*2. Thêm phần tử vào mảng*
+**2. Thêm phần tử vào mảng**
 
 a. `push` thêm vào cuối.
 ```javascript
@@ -298,14 +298,14 @@ var array = [1,2,3,4,5];
 array.unshift(0) // array = [0,1,2,3,4,5]
 ```
 
-*3. Đọc giá trị trên mảng.*
+**3. Đọc giá trị trên mảng.**
 
 ```javascript
 var array = [1,2,3];
 array[1] // 2 , đọc tại vị trí 1, đếm từ 0.
 ```
 
-*4. Lấy phần tử trên mảng ra*
+**4. Lấy phần tử trên mảng ra**
 Có 3 kiểu lấy phần tử ra đó là lấy đầu, lấy cuối và lấy ở vị trí `i`. Chú ý khi lấy
 ra xong thì phần tử đó cũng xóa trong mảng gốc.
 
@@ -321,7 +321,7 @@ var array = [1,2,3,4,5];
 array.shift() // 1, lấy phần từ ở cuối ra.
 ```
 
-*5. Cắt mảng (tạo một mảng con từ mảng gốc ban đầu)*
+**5. Cắt mảng (tạo một mảng con từ mảng gốc ban đầu)**
 
 hàm `slice` nhận vào hai tham số  bắt đầu và kết thúc. Chú ý nếu chỉ đưa vào một
 tham số thì xem như là cắt từ vị trí đó đến cuối mảng.
@@ -339,7 +339,7 @@ Ví dụ cắt từ vị trí số 3 đến tận cùng mảng.
 var array = [1,2,3,4,5];
 array.slice(3) // [4,5]
 ```
-*6. Sắp xếp mảng*
+**6. Sắp xếp mảng**
 
 Để sắp xếp mảng thì JS hỗ trợ cho bạn một phương thức `sort`. Nguyên tắc làm việc của hàm `sort` này là đem so sánh từng cặp giá trị của 2 số, sau đó tùy theo giá trị trả về.
 
@@ -417,7 +417,7 @@ addTwoNumbers(5,3) // trả về 8
 
 #### 3.3.3 Callback trong JavaScript
 
-*Khái niệm và cách tiếp cận*
+**a. Khái niệm và cách tiếp cận**
 
 Trong khi làm việc với JavaScript bạn sẽ rất tường xuyên nghe đến khái niệm Callback.Callback có thể hiểu là việc bạn truyền vào một hàm khác tạm gọi là B đối số là một `function` tạm gọi là A. Sau đó việc triệu gọi function A bạn truyền vào sẽ phụ thuộc function B kìa.
 
@@ -520,7 +520,7 @@ findStudentByID(5,onSuccess, onNotFound, onError);
 
 Qua cách tiếp cận callback trên các bạn có thể thấy ngay là mã lệnh bây giờ trở nên rất đẹp và dễ hiểu đúng không nào.
 
-*Ứng dụng trong xử lý bất đồng bộ*
+**b. Ứng dụng trong xử lý bất đồng bộ**
 
 Không chỉ dừng lại ở việc design pattern như trên, callback còn được xử dụng và cũng chính là core của NodeJS.
 
@@ -561,7 +561,7 @@ console.log('Do something 3');
 ```
 không hề chờ mà thực thi luôn, sau đó 10 giây thì hàm `onDone` mới thực thi, nhờ đó tốc độ chương trình sẽ tăng rất nhiều.
 
-*Lưu ý khi sử dụng callback*
+**c. Lưu ý khi sử dụng callback**
 
 khi viết mã bất đồng bộ, nghĩa là các bạn phải nắm rõ khi nào nó đồng bộ (có dữ liệu) để xử lý logic code cho đúng tránh bị lỗi. Ví dụ
 
