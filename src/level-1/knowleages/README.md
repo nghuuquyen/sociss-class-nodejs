@@ -5,7 +5,7 @@
 
 Sau một thời gian dài làm việc với Node JS nói riêng và cảm nhận về việc phát triển phân mềm nói chung mình rút ra được một số kinh nghiệm sau.
 
-## 1. Cách để có thể học và làm quen với việc sử dụng Node JS.
+## I. Cách để có thể học và làm quen với việc sử dụng Node JS.
 
 Để học được Node JS thì đầu tiên các bạn nên lên Youtube xem video trước, để biết nó ra sao và làm thế nào cài đặt, làm thế nào có thể chạy thử một ứng dụng “Hello World”.
 
@@ -18,14 +18,14 @@ Biết mình đang học cái gì và dùng làm cái gì. Đây là một câu 
 Lời khuyên: Node JS thì không phụ thuộc vào IDE, các bạn hãy cài Atom, Visual Studio Code hay Sublime Text để code, việc dùng Text Editor để code và chạy chương trình thông qua Terminal là kỹ năng bắt đầu tốt và giúp các bạn tự tin hơn về sau.
 
 
-## 2. Bắt đầu bước vào con đường chuyên nghiệp hơn .
+## II. Bắt đầu bước vào con đường chuyên nghiệp hơn .
 
 Một sự thật là các bạn sau khi hoàn thành bước 1 ở trên thì sẽ bắt đầu mất định hướng, không biết đi đâu và làm gì tiếp theo. Vì một trong những nguyên nhân dưới đây.
 
-a) Không biết ngoài công ty người ta làm dự án với công nghệ này ra sao ?
-b) Mình học như vậy là đã xin được việc làm chưa, cần học thêm gì nữa ?
-c) Giờ muốn làm cho mình một sản phẩm thì đã được chưa nhỉ ?
-d) Tự cảm thấy có gì đó chưa ổn làm khi nhìn lại Code, bạn tốn quá nhiều thời gian và có một chút gì đó thiếu tự tin khi muốn trình bày mã của mình ra cho một ai đó ?
+1. Không biết ngoài công ty người ta làm dự án với công nghệ này ra sao ?
+2. Mình học như vậy là đã xin được việc làm chưa, cần học thêm gì nữa ?
+3. Giờ muốn làm cho mình một sản phẩm thì đã được chưa nhỉ ?
+4. Tự cảm thấy có gì đó chưa ổn làm khi nhìn lại Code, bạn tốn quá nhiều thời gian và có một chút gì đó thiếu tự tin khi muốn trình bày mã của mình ra cho một ai đó ?
 
 Và tất nhiên là còn nhiều điều nữa, nhưng những điều trên chính là những gì chính bản thân mình gặp trong khoảng 3 năm trước đây. Khi mà lúc đó mình hoàn thành khóa học ở một trung tập dạy lặp trình ra và bị sốc khi gặp các đàn anh dày dặn kinh nghiệm nói rằng “Mấy cái em học giờ người ta không dùng nữa rồi, em phải học lại cái khác đi.”. 
 
@@ -34,16 +34,16 @@ Và các để không lạc lối ở giai đoạn này thì các bạn phải g
 
 
 
-a) Ở công ty người ta không làm việc một mình, họ làm theo nhóm nhiều người nghĩa là học phải có Quy trình và một tập các quy tắc. 
+a) Ở công ty người ta không làm việc một mình, họ làm theo nhóm nhiều người nghĩa là học phải có **quy trình** và một **tập các quy tắc**. 
 
-Quy trình ở đây thường gặp trong các công ty công nghệ hiện nay là quy trình Scrum, hãy thử lên mạng tìm kiếm và đọc về quy trình này.
+**Quy trình** ở đây thường gặp trong các công ty công nghệ hiện nay là **quy trình Scrum**, hãy thử lên mạng tìm kiếm và đọc về quy trình này.
 
-Quy tắc ở đây là các chuẩn mực viết code, viết code thế nào cho dễ đọc, dễ hiểu và dễ bảo trình.Kế đến là cách tổ chức cấu trúc một chương trình (Cách tạo thư mục, các đặt tên file, …). 
+**Quy tắc** ở đây là các chuẩn mực viết code, viết code thế nào cho dễ đọc, dễ hiểu và dễ bảo trình.Kế đến là cách tổ chức cấu trúc một chương trình (Cách tạo thư mục, các đặt tên file, …). 
 
 Để biết được các quy tắc viết code và tổ chức code bạn hãy search trên google hai cụm từ khóa là :
 
-- Node JS styleguide : Cái này là quy tắt viết code 
-- Node js architecture best practices : Cái này là cách tổ chức và các cách thực hành tốt.
+- **Node JS styleguide** : Cái này là quy tắt viết code 
+- **Node js architecture best practices** : Cái này là cách tổ chức và các cách thực hành tốt.
 
 **Styleguide**  giống như là tập các quy tắt **clean code** cho một quy tắc cụ thể, thường các bản hướng dẫn tốt đều nằm ở github các bạn chọn những project nhiều star để học nhé ( Google và facebook là những nhà cung cấp Styleguide nhiều nhất và độ tin cậy thống nhất cao nhất)
  
@@ -107,12 +107,12 @@ và không thể thiếu được **policy** đây là nơi chứa các mã lệ
 Để ý thêm các bạn sẽ còn thấy các thư mục như là : **build , docs và public** trong đó :
 **build** : là thư mục chưa các **file binary của project**, đây là file thực thi được tạo ra từ mã nguồn có thể chạy trên một hệ điều hành nào đó mà không cần có mã nguồn gốc. Các bạn hãy nghĩ đến việc khi các bạn cần đem sản phẩm đi Demo hoặc chạy ở máy chủ thì không thể để mã nguồn gốc ở đó được , **tránh việc hack và ăn cắp mã nguồn** là việc vô cùng nguy hiểm, việc build thành các file thực thi dưới sự hỗ trợ của công cụ là vô cùng cần thiết. Với Node JS thì **pkg** là một ứng cử viên sáng giá trong công việc này.
 
-Thư mục **docs** thường thì chứa các file .md là các file tài liệu dự án, như là file hướng dẫn sử dụng, hướng dẫn cài đặt, **hướng dẫn sử dụng** các API, v.v. Thường khi viết một tính năng gì đó qua trọng mình luôn ghi vào tài liệu ngay phòng về sau quên và cũng để sau này các đồng nghiệp hay bạn bè vào thì cũng dễ làm việc cùng hơn.
+Thư mục **docs** thường thì chứa các file .md là các file tài liệu dự án, như là file hướng dẫn sử dụng, hướng dẫn cài đặt, **hướng dẫn sử dụng** các API, v.v. Thường khi viết một tính năng gì đó qua trọng mình luôn ghi vào tài liệu ngay, phòng về sau quên và cũng để sau này các đồng nghiệp hay bạn bè vào thì cũng dễ làm việc cùng hơn.
 
 **public** theo đúng nghĩa là chứa các tài nguyên công khai như là các file JS, CSS hoặc hình ảnh ( JS ở client nha
 
 thư mục **scripts** đây là thư mục thường chưa một số **shell script** để làm việc với hệ điều hành, ví dụ sau này khi bạn cần config một bộ CI hay **auto build, auto deploy** thì bạn sẽ viết các kịch bản shell vào.
-ví dụ: để chạy ứng dụng thì cần gõ các lệnh như là 
+ví dụ: để chạy ứng dụng thì cần gõ các lệnh như là. 
 
 ```markup
 git pull
@@ -122,6 +122,8 @@ node server
 
 các lệnh này sẽ ghi vào các file shell script, tùy vào từng hệ điều hành mà sẽ có loại shell khác nhau.
 
+Thư mục **tests** chứa code test cho ứng dụng để tránh trường hợp khi bạn viết một tính năng mới lại kéo theo lỗi cho một tính năng trước đó đang chạy tốt hoặc một ai đó đã làm sai code của bạn. Các kỹ thuật viết Test hiện nay hay gặp là **TDD (Test-Driven Development)** , **BDD (Behavior Driven Development)**. Tuy nhiên viết code test là rất tốn thời gian, nên để hiệu quả thường chúng ta chỉ viết code test cho những tính năng thật sự quan trọng.
+  
 cuối cùng đó là **tasks** đây là thư mục chứa các **file config cho việc auto build và auto deploy**. Thường thì Node JS mình hay **dùng Grunt để làm công cụ build**.
 
 Ví dụ khi viết mã CSS bằng **SASS** thì các bạn cần phải chạy một trình compile để dịch mã SASS sang CSS. Khi deploy một website thì bạn cần **Minify mã CSS , JS và HTML** để tiết kiếm băng thông và tăng tốc độ tải.
@@ -150,7 +152,7 @@ thứ hai đó là thường xuyên đọc tạp chí hoặc blog công nghệ  
 
 Nguyễn Hữu Quyền 
 
-**website**: [ sociss.edu.vn - Sociss Class - Online Eduction Center ](https://sociss.edu.vn/search)
+**website**: [ sociss.edu.vn - Sociss Class - Online Education Center ](https://sociss.edu.vn/search)
 **email**  : nghuuquyen@gmail.com 
 
 
