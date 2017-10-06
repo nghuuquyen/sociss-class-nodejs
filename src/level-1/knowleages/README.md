@@ -45,12 +45,12 @@ Quy tắc ở đây là các chuẩn mực viết code, viết code thế nào c
 - Node JS styleguide : Cái này là quy tắt viết code 
 - Node js architecture best practices : Cái này là cách tổ chức và các cách thực hành tốt.
 
-Styleguide  giống như là tập các quy tắt clean code cho một quy tắc cụ thể, thường các bản hướng dẫn tốt đều nằm ở github các bạn chọn những project nhiều star để học nhé ( Google và facebook là những nhà cung cấp Styleguide nhiều nhất và độ tin cậy thống nhất cao nhất)
+**Styleguide**  giống như là tập các quy tắt **clean code** cho một quy tắc cụ thể, thường các bản hướng dẫn tốt đều nằm ở github các bạn chọn những project nhiều star để học nhé ( Google và facebook là những nhà cung cấp Styleguide nhiều nhất và độ tin cậy thống nhất cao nhất)
  
-Project architecture : Ngoài đọc các tài liệu trên mạng các bạn cần phải có một hướng tiếp cận đúng để có thể dễ dàng nghiên cứ cái này, và hướng tiếp cận đó gồm những điều đây.
+**Project architecture** : Ngoài đọc các tài liệu trên mạng các bạn cần phải có một hướng tiếp cận đúng để có thể dễ dàng nghiên cứ cái này, và hướng tiếp cận đó gồm những điều đây.
 
-Các project lớn thường xây dựng dựa trên các mộ hình như là MVC, mô hình Webservice, Microservice, ….
-Một project thì luôn có những module giúp giao tiếp với cơ sỡ dữ liệu, những module để xử lý nghiệp vụ nhưng validation, query data, … và một module ở lớp view để giao tiếp với thế giới bên ngoài. Tất cả đều có một điểm khởi động ở đâu đó, ví dụ như Node JS thì thường là file index.js hoặc file server.js. Đọc ngược từ đây bạn sẽ nắm được dòng hoạt động của một project nhanh hơn.
+Các project lớn thường xây dựng dựa trên các mộ hình như là **MVC**, mô hình **Webservice**, **Microservice**, ….
+Một project thì luôn có những module giúp giao tiếp với **cơ sỡ dữ liệu** thông qua **ORM**, những module để xử lý nghiệp vụ nhưng validation, query data, … và một module ở lớp view để giao tiếp với thế giới bên ngoài. Tất cả đều có một điểm khởi động ở đâu đó, ví dụ như Node JS thì thường là file index.js hoặc file server.js. Đọc ngược từ đây bạn sẽ nắm được dòng hoạt động của một project nhanh hơn.
 Các điểm hay của một project Node JS nói riêng thường nằm ở cách tổ chức thư mục và các đặt tên file. Nhìn qua một cấu trúc thư mục các bạn có thể năm được dòng hoạt động của nó dễ dàng.
 
 ```markup
@@ -93,48 +93,53 @@ Các điểm hay của một project Node JS nói riêng thường nằm ở cá
 
 Ví dụ ở trên là một cấu trúc thư mục mình hay sử dụng để Code một Project Node JS. 
 
-Đầu tiên nhìn vào các bạn sẽ thấy hai thư mục là client và server. client ở đây chính là các mã lệnh JavaScript ở phía client, mang đến một giao diện người dùng tốt và trực quan cho người dùng, mình thì mình rất quen tay dùng Angular JS. Server ở đây chính là code Node ở phía server,để ý sơ qua các bạn sẽ thấy mình có các thư mục chính là controllers , services, routes, models và configs. Trong đó controllers, services và models chính là 3 thư mục đặc trưng trong khi xây dựng một trang web hoặc một API. Kế đến mình còn có thư mục configs  trong này chứa các cài đặt về môi trường chạy ứng dụng, các message dành cho việc đa ngôn ngữ và các thiết lập dành cho việc logging khi chạy ứng dụng thực tế. 
+Đầu tiên nhìn vào các bạn sẽ thấy hai thư mục là **client** và **server**. client ở đây chính là các mã lệnh JavaScript ở phía client, mang đến một giao diện người dùng tốt và trực quan cho người dùng, mình thì mình rất quen tay dùng Angular JS. **Server** ở đây chính là code Node ở phía server,để ý sơ qua các bạn sẽ thấy mình có các thư mục chính là controllers , services, routes, models và configs. Trong đó **controllers**, **services** và **models** chính là 3 thư mục đặc trưng trong khi xây dựng một trang web hoặc một **API RESTFul Webservice**. Kế đến mình còn có thư mục configs  trong này chứa các cài đặt về môi trường chạy ứng dụng, các **message dành cho việc đa ngôn ngữ** và các thiết lập dành cho việc **logging khi chạy ứng dụng thực tế** để lưu vết lỗi chương trình. 
 
-Để ý các từ mình bôi đậm, vì đó chính là từ khóa để các bạn reseach trên mạng. 
+**Để ý các từ mình bôi đậm, vì đó chính là từ khóa để các bạn reseach trên mạng.** 
 
-Ngoài ra còn có thể các thư mục như jobs thư mục này chứa các mã lệnh dùng để migration data - Để cập nhật database chẳng hạn  hoặc các cron jobs - chạy xóa log hàng tuần hoặc backup database , batch jobs - để cập nhật một lượng lớn dữ liệu khi bạn cần nó để chạy một tính năng mới.
+Ngoài ra còn có thể các thư mục như **jobs** thư mục này chứa các mã lệnh dùng để **migration data** - Để cập nhật database chẳng hạn  hoặc các **cron jobs** - chạy xóa log hàng tuần hoặc **backup database** , **batch jobs** - để cập nhật một lượng lớn dữ liệu khi bạn cần nó để chạy một tính năng mới.
 
-và không thể thiếu được policy đây là nơi chứa các mã lệnh để kiểm tra quyền của người dùng trên một tính năng nào đó, ví dụ bạn không thể để một người dùng A cập nhật thông tin tài khoản của người B, hay User mà vào thẳng trang của của Admin để cập nhật dữ liệu, trong Node JS thì thư việc ACL là một thư viện hay được sử dụng cho việc tạo các policy. Tại thời điểm này còn có thể có những thư viện tốt hơn các bạn có thể tra cứu nó với từ khóa ACL / Roles + Permissions. 
+và không thể thiếu được **policy** đây là nơi chứa các mã lệnh để kiểm tra quyền của người dùng trên một tính năng nào đó, ví dụ bạn không thể để một người dùng A cập nhật thông tin tài khoản của người B, hay User mà vào thẳng trang của của Admin để cập nhật dữ liệu, trong Node JS thì thư việc **ACL** là một thư viện hay được sử dụng cho việc tạo các policy. Tại thời điểm này còn có thể có những thư viện tốt hơn các bạn có thể tra cứu nó với từ khóa **ACL / Roles + Permissions**. 
 
-Lời khuyên : Thật ra thì sau một thời gian làm với Node, mình cũng hoàn toàn có thể tự viết riêng cho mình các policys dưới dạng Middleware rất dễ dàng. Có một lời khuyên được các chuyên gia nói đó là đừng quá phụ thuộc và các bộ thư viện, dùng nó mà không hiểu gì về nó. Hãy mở code nó ra đọc và xem thử liệu mình có cần dùng nó hay không hay có thể tự viết được khi tham khảo nó. Sẽ có một phần phân tích sâu hơn vào luận điểm n
+**Lời khuyên** : Thật ra thì sau một thời gian làm với Node, mình cũng hoàn toàn có thể tự viết riêng cho mình các policys dưới dạng **Middleware** rất dễ dàng. Có một lời khuyên được các chuyên gia nói đó là đừng quá phụ thuộc và các bộ thư viện, dùng nó mà không hiểu gì về nó. Hãy mở code nó ra đọc và xem thử liệu mình có cần dùng nó hay không hay có thể tự viết được khi tham khảo nó. Sẽ có một phần phân tích sâu hơn vào luận điểm này.
 
 
-Để ý thêm các bạn sẽ còn thấy các thư mục như là : build , docs và public trong đó :
-build : là thư mục chưa các file binary của project, đây là file thực thi được tạo ra từ mã nguồn có thể chạy trên một hệ điều hành nào đó mà không cần có mã nguồn gốc. Các bạn hãy nghĩ đến việc khi các bạn cần đem sản phẩm đi Demo hoặc chạy ở máy chủ thì không thể để mã nguồn gốc ở đó được , việc hack và ăn cắp mã nguồn là việc vô cùng nguy hiểm, việc build thành các file thực thi dưới sự hỗ trợ của công cụ là vô cùng cần thiết. Với Node JS thì pkg là một ứng cử viên sáng giá trong công việc này.
+Để ý thêm các bạn sẽ còn thấy các thư mục như là : **build , docs và public** trong đó :
+**build** : là thư mục chưa các **file binary của project**, đây là file thực thi được tạo ra từ mã nguồn có thể chạy trên một hệ điều hành nào đó mà không cần có mã nguồn gốc. Các bạn hãy nghĩ đến việc khi các bạn cần đem sản phẩm đi Demo hoặc chạy ở máy chủ thì không thể để mã nguồn gốc ở đó được , **tránh việc hack và ăn cắp mã nguồn** là việc vô cùng nguy hiểm, việc build thành các file thực thi dưới sự hỗ trợ của công cụ là vô cùng cần thiết. Với Node JS thì **pkg** là một ứng cử viên sáng giá trong công việc này.
 
-Thư mục docs thường thì chứa các file .md là các file tài liệu dự án, như là file hướng dẫn sử dụng, hướng dẫn cài đặt, hướng dẫn sử dụng các API, v.v. Thường khi viết một tính năng gì đó qua trọng mình luôn ghi vào tài liệu ngay phòng về sau quên và cũng để sau này các đồng nghiệp hay bạn bè vào thì cũng dễ làm việc cùng hơn.
+Thư mục **docs** thường thì chứa các file .md là các file tài liệu dự án, như là file hướng dẫn sử dụng, hướng dẫn cài đặt, **hướng dẫn sử dụng** các API, v.v. Thường khi viết một tính năng gì đó qua trọng mình luôn ghi vào tài liệu ngay phòng về sau quên và cũng để sau này các đồng nghiệp hay bạn bè vào thì cũng dễ làm việc cùng hơn.
 
-Public theo đúng nghĩa là chứa các tài nguyên công khai như là các file JS, CSS hoặc hình ảnh ( JS ở client nha
+**public** theo đúng nghĩa là chứa các tài nguyên công khai như là các file JS, CSS hoặc hình ảnh ( JS ở client nha
 
-thư mục Scripts đây là thư mục thường chưa một số shell script để làm việc với hệ điều hành, ví dụ sau này khi bạn cần config một bộ CI hay auto build, auto deploy thì bạn sẽ viết các kịch bản shell vào.
+thư mục **scripts** đây là thư mục thường chưa một số **shell script** để làm việc với hệ điều hành, ví dụ sau này khi bạn cần config một bộ CI hay **auto build, auto deploy** thì bạn sẽ viết các kịch bản shell vào.
 ví dụ: để chạy ứng dụng thì cần gõ các lệnh như là 
+
+```markup
 git pull
 grunt buid 
 node server 
+```
 
 các lệnh này sẽ ghi vào các file shell script, tùy vào từng hệ điều hành mà sẽ có loại shell khác nhau.
 
-cuối cùng đó là tasks đây là thư mục chứa các file config cho việc auto build và auto deploy. Thường thì Node JS mình hay dùng Grunt để làm công cụ build.
+cuối cùng đó là **tasks** đây là thư mục chứa các **file config cho việc auto build và auto deploy**. Thường thì Node JS mình hay **dùng Grunt để làm công cụ build**.
 
-Ví dụ khi viết mã CSS bằng SASS thì các bạn cần phải chạy một trình compile để dịch mã SASS sang CSS. Khi deploy một website thì bạn cần Minify mã CSS , JS và HTML để tiết kiếm băng thông và tăng tốc độ tải.
+Ví dụ khi viết mã CSS bằng **SASS** thì các bạn cần phải chạy một trình compile để dịch mã SASS sang CSS. Khi deploy một website thì bạn cần **Minify mã CSS , JS và HTML** để tiết kiếm băng thông và tăng tốc độ tải.
 
-Hoặc trong khi code bạn cần một công cụ liên tục check mã mình xem viết có đúng tiêu chuẩn không thì có thể sử dụng JShint và CSSHint. 
+Hoặc trong khi code bạn cần một công cụ liên tục check mã mình xem viết có đúng tiêu chuẩn không thì có thể sử dụng **JShint và CSSHint**. 
 
 Và còn rất nhiều thứ có thể làm được với Grunt  hoặc một công cụ khác đó là Webpack cũng có công dụng gần tương tự .
 
 ## Chốt lại phần 2: 
 
-Để có được các kiến thức cũng như cập nhật sớm nhất sự thay đổi của công nghệ các bạn nên theo dõi một opensource project trên github đọc hiểu Code của Project đó để có thể nhận biết ra sự thay đổi. Mình follow MEAN.JS và Mean project trên Github, hai project này cung cấp cho mình kỹ năng rất nhiều.
+Để có được các kiến thức cũng như cập nhật sớm nhất sự thay đổi của công nghệ các bạn **nên theo dõi một opensource project trên github** đọc hiểu Code của Project đó để có thể nhận biết ra sự thay đổi. Mình follow MEAN.JS và Mean project trên Github, hai project này cung cấp cho mình kỹ năng rất nhiều.
 
 Bạn có thể tìm thấy rất nhiều Opensource project tốt tại đây hoặc reseach trên github.
-https://github.com/sqreen/awesome-nodejs-projects
 
-thứ hai đó là thường xuyên đọc tạp chí hoặc blog công nghệ  ở Việt Nam thì Techtalk , Viblo.asia là những trang khá uy tín và cung cấp thông tin chất lượng nhất. Ngoài ra nếu bạn có thể thì dzone.com là một trang tuyệt vời để cập nhật thông tin tổng quát về công nghệ (Mình rất thích trang này).
+
+[ Những opensource project Node JS Hay ](https://github.com/sqreen/awesome-nodejs-projects)
+
+thứ hai đó là thường xuyên đọc tạp chí hoặc blog công nghệ  ở Việt Nam thì **Techtalk , Viblo.asia** là những trang khá uy tín và cung cấp thông tin chất lượng nhất. Ngoài ra nếu bạn có thể thì **dzone.com** là một trang tuyệt vời để cập nhật thông tin tổng quát về công nghệ (Mình rất thích trang này).
 
 
 
