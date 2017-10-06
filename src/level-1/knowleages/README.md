@@ -150,7 +150,8 @@ thứ hai đó là thường xuyên đọc tạp chí hoặc blog công nghệ  
 
 Nguyễn Hữu Quyền 
 
-website: sociss.edu.vn
-email  : nghuuquyen@gmail.com 
+**website**: [ sociss.edu.vn - Sociss Class - Online Eduction Center ](https://sociss.edu.vn/search)
+**email**  : nghuuquyen@gmail.com 
+
 
 
