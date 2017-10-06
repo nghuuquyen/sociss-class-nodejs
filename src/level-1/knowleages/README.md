@@ -1,11 +1,11 @@
 
 
 
-#Những kinh nghiệm đúc kết được sau một thời gian lập trình Node JS .
+# Những kinh nghiệm đúc kết được sau một thời gian lập trình Node JS .
 
 Sau một thời gian dài làm việc với Node JS nói riêng và cảm nhận về việc phát triển phân mềm nói chung mình rút ra được một số kinh nghiệm sau.
 
-##1. Cách để có thể học và làm quen với việc sử dụng Node JS.
+## 1. Cách để có thể học và làm quen với việc sử dụng Node JS.
 
 Để học được Node JS thì đầu tiên các bạn nên lên Youtube xem video trước, để biết nó ra sao và làm thế nào cài đặt, làm thế nào có thể chạy thử một ứng dụng “Hello World”.
 
@@ -18,7 +18,7 @@ Biết mình đang học cái gì và dùng làm cái gì. Đây là một câu 
 Lời khuyên: Node JS thì không phụ thuộc vào IDE, các bạn hãy cài Atom, Visual Studio Code hay Sublime Text để code, việc dùng Text Editor để code và chạy chương trình thông qua Terminal là kỹ năng bắt đầu tốt và giúp các bạn tự tin hơn về sau.
 
 
-##2. Bắt đầu bước vào con đường chuyên nghiệp hơn .
+## 2. Bắt đầu bước vào con đường chuyên nghiệp hơn .
 
 Một sự thật là các bạn sau khi hoàn thành bước 1 ở trên thì sẽ bắt đầu mất định hướng, không biết đi đâu và làm gì tiếp theo. Vì một trong những nguyên nhân dưới đây.
 
@@ -46,13 +46,14 @@ Quy tắc ở đây là các chuẩn mực viết code, viết code thế nào c
 - Node js architecture best practices : Cái này là cách tổ chức và các cách thực hành tốt.
 
 Styleguide  giống như là tập các quy tắt clean code cho một quy tắc cụ thể, thường các bản hướng dẫn tốt đều nằm ở github các bạn chọn những project nhiều star để học nhé ( Google và facebook là những nhà cung cấp Styleguide nhiều nhất và độ tin cậy thống nhất cao nhất)
-
+ 
 Project architecture : Ngoài đọc các tài liệu trên mạng các bạn cần phải có một hướng tiếp cận đúng để có thể dễ dàng nghiên cứ cái này, và hướng tiếp cận đó gồm những điều đây.
 
 Các project lớn thường xây dựng dựa trên các mộ hình như là MVC, mô hình Webservice, Microservice, ….
 Một project thì luôn có những module giúp giao tiếp với cơ sỡ dữ liệu, những module để xử lý nghiệp vụ nhưng validation, query data, … và một module ở lớp view để giao tiếp với thế giới bên ngoài. Tất cả đều có một điểm khởi động ở đâu đó, ví dụ như Node JS thì thường là file index.js hoặc file server.js. Đọc ngược từ đây bạn sẽ nắm được dòng hoạt động của một project nhanh hơn.
 Các điểm hay của một project Node JS nói riêng thường nằm ở cách tổ chức thư mục và các đặt tên file. Nhìn qua một cấu trúc thư mục các bạn có thể năm được dòng hoạt động của nó dễ dàng.
 
+```markup
    .
 ├── apps
 │   ├── client
@@ -88,6 +89,7 @@ Các điểm hay của một project Node JS nói riêng thường nằm ở cá
 │   └── uploads
 ├── scripts
 └── tasks
+```
 
 Ví dụ ở trên là một cấu trúc thư mục mình hay sử dụng để Code một Project Node JS. 
 
@@ -125,7 +127,7 @@ Hoặc trong khi code bạn cần một công cụ liên tục check mã mình x
 
 Và còn rất nhiều thứ có thể làm được với Grunt  hoặc một công cụ khác đó là Webpack cũng có công dụng gần tương tự .
 
-##Chốt lại phần 2: 
+## Chốt lại phần 2: 
 
 Để có được các kiến thức cũng như cập nhật sớm nhất sự thay đổi của công nghệ các bạn nên theo dõi một opensource project trên github đọc hiểu Code của Project đó để có thể nhận biết ra sự thay đổi. Mình follow MEAN.JS và Mean project trên Github, hai project này cung cấp cho mình kỹ năng rất nhiều.
 
