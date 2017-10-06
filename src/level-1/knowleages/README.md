@@ -27,11 +27,9 @@ Một sự thật là các bạn sau khi hoàn thành bước 1 ở trên thì s
 3. Giờ muốn làm cho mình một sản phẩm thì đã được chưa nhỉ ?
 4. Tự cảm thấy có gì đó chưa ổn làm khi nhìn lại Code, bạn tốn quá nhiều thời gian và có một chút gì đó thiếu tự tin khi muốn trình bày mã của mình ra cho một ai đó ?
 
-Và tất nhiên là còn nhiều điều nữa, nhưng những điều trên chính là những gì chính bản thân mình gặp trong khoảng 3 năm trước đây. Khi mà lúc đó mình hoàn thành khóa học ở một trung tập dạy lặp trình ra và bị sốc khi gặp các đàn anh dày dặn kinh nghiệm nói rằng “Mấy cái em học giờ người ta không dùng nữa rồi, em phải học lại cái khác đi.”. 
+Và tất nhiên là còn nhiều điều nữa, nhưng những điều trên chính là những gì chính bản thân mình gặp trong khoảng 3 năm trước đây. Khi mà lúc đó mình hoàn thành khóa học ở một trung tập dạy lập trình ra và bị sốc khi gặp các đàn anh dày dặn kinh nghiệm nói rằng “Mấy cái em học giờ người ta không dùng nữa rồi, em phải học lại cái khác đi.”. 
 
-Và các để không lạc lối ở giai đoạn này thì các bạn phải ghi nhớ và thấu hiểu các điều sau đây.
-
-
+Và các để không lạc lối ở giai đoạn này thì các bạn phải nhìn nhận một số  điều sau đây.
 
 
 a) Ở công ty người ta không làm việc một mình, họ làm theo nhóm nhiều người nghĩa là học phải có **quy trình** và một **tập các quy tắc**. 
