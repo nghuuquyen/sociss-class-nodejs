@@ -9,7 +9,7 @@ Sau một thời gian dài làm việc với Node JS nói riêng và cảm nhậ
 
 Để học được Node JS thì đầu tiên các bạn nên lên Youtube xem video trước, để biết nó ra sao và làm thế nào cài đặt, làm thế nào có thể chạy thử một ứng dụng “Hello World”.
 
-Thứ hai, các bạn có thể lên các trang như w3school hay tutorialspoints để học các kiến thức bắt đầu như cấu trúc câu lệnh, từ khóa, các hàm hay thư viện thường dùng.
+Thứ hai, các bạn có thể lên các trang như [W3Schools Online Web Tutorials](https://www.w3schools.com/) hay [TutorialsPoint](https://www.tutorialspoint.com/) để học các kiến thức bắt đầu như cấu trúc câu lệnh, từ khóa, các hàm hay thư viện thường dùng.
 
 Sau một thời gian mày mò khởi động, mình tin rằng các bạn sẽ thấy ứng dụng thấy rõ nhất của Node JS là xây dựng một trang web, lúc này không cần nghĩ nhiều các bạn hay thử mày mò làm thử một trang web nhỏ cho mình (Nhớ là giữ nó thật nhỏ). Sau khi tạo ra được một sản phẩm nho nhỏ cho mình như một web todo hay như cái mình làm đầu tiên chính là một mini blog để mình viết bài chẳng hạn. Đến khi có một sản phẩm nhỏ cho riêng mình thì chính lúc đó các ban đã có một thứ vô cùng quan trọng đó là.
 
@@ -139,9 +139,9 @@ Và còn rất nhiều thứ có thể làm được với Grunt  hoặc một c
 Bạn có thể tìm thấy rất nhiều Opensource project tốt tại đây hoặc reseach trên github.
 
 
-[ Những opensource project Node JS Hay ](https://github.com/sqreen/awesome-nodejs-projects)
+[ Những opensource project Node JS hay ](https://github.com/sqreen/awesome-nodejs-projects)
 
-thứ hai đó là thường xuyên đọc tạp chí hoặc blog công nghệ  ở Việt Nam thì **Techtalk , Viblo.asia** là những trang khá uy tín và cung cấp thông tin chất lượng nhất. Ngoài ra nếu bạn có thể thì **dzone.com** là một trang tuyệt vời để cập nhật thông tin tổng quát về công nghệ (Mình rất thích trang này).
+thứ hai đó là thường xuyên đọc tạp chí hoặc blog công nghệ  ở Việt Nam thì [Tech Talk | Xu hướng công nghệ](https://techtalk.vn/) , [Viblo | Free service for technical knowledge sharing](https://viblo.asia/) là những trang khá uy tín và cung cấp thông tin chất lượng nhất. Ngoài ra nếu bạn có thể thì [DZone: Programming & DevOps news, tutorials & tools](https://dzone.com/) là một trang tuyệt vời để cập nhật thông tin tổng quát về công nghệ (Mình rất thích trang này).
 
 
 
