@@ -79,6 +79,7 @@ Có thể thay 127.0.0.1 bằng localhost vẫn chạy được, tuy nhiên bạ
 
 
 **Giải thích ý nghĩa câu lệnh quan trọng**
+
 Như bạn đã biết trong bài học về giao thức HTTP, với một request tương ứng với một URL cụ thể thì server có nhiệm vụ đáp ứng request đó.
 
 Ở đây `requestHandler` chính là phương thức đáp ứng đó, với mỗi request vào web server thì nó sẽ được gọi để đáp ứng các request.
