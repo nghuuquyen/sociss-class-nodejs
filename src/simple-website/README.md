@@ -216,7 +216,6 @@ Trước khi có bài học tiếp theo, các bạn hãy làm lại những ví 
 Mã nguồn của bài học này mình để ở Github với URL là [Create Simple HTTP Webserver](https://github.com/nghuuquyen/sociss-class-nodejs/tree/master/src/simple-website)
 
 
-
 ### Tác giả
 Nguyễn Hữu Quyền
 **Email:** nghuuquyen@gmail.com
