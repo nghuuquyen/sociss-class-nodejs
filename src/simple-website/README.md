@@ -73,11 +73,52 @@ server.listen(port, function(err){
 
 Đoạn mã trên đã khởi tạo một webserver HTTP lắng nghe ở cổng 3000 để tiếp nhận các request.Để ý trong đoạn mã trên mình lấy được thông tin của trình duyệt người dùng qua câu lệnh.
 
+Mở trình duyệt của bạn lên, truy cập vào `127.0.0.1:3000` và xem kết quả. Sau đó lần lượt truy cập vào đường dẫn `127.0.0.1:3000/about` và `127.0.0.1:3000/contact` bạn sẽ thấy nội dung tương ứng.
+
+Có thể thay 127.0.0.1 bằng localhost vẫn chạy được, tuy nhiên bạn có thể reseach thêm một chút để biết sự khác nhau giữa hai cái này nếu cần.
+
+
+**Giải thích ý nghĩa câu lệnh quan trọng**
+Như bạn đã biết trong bài học về giao thức HTTP, với một request tương ứng với một URL cụ thể thì server có nhiệm vụ đáp ứng request đó.
+
+Ở đây `requestHandler` chính là phương thức đáp ứng đó, với mỗi request vào web server thì nó sẽ được gọi để đáp ứng các request.
+
+```javascript
+// Step 1: Do create HTTP server.
+let server = http.createServer(requestHandler);
+```
+
+câu lệnh trên chính là câu lệnh tạo một HTTP webserver với requestHandler tương ứng.
+
+Sau khi tạo xong thì web server vẫn chưa chạy, để chạy được web server chúng ta cần chỉ cho nó một cổng cụ thể để chạy. Vì qua bài học về [web server](https://sociss.edu.vn/courses/nodejs/lesson/web-server-la-gi) các bạn đã biết rằng một web server thật ra là một chương trình chạy ở một cổng cụ thể trên một máy tính.
+
+ ```javascript
+// Step 3: Turn on server on port.
+server.listen(port, function(err){
+  if (err) {
+    return console.error('Something bad happened', err);
+  }
+
+  console.log(`server is listening on ${port}`);
+});
+```
+
+Câu lệnh trên chính là để khởi chạy web server trên cổng 3000 để lắng nghe các request từ client.
+
+Lúc này web server đã chạy ở cổng 3000 rồi, các bạn có thể truy cập đến nó bằng cách mở trình duyệt
+và truy cập `127.0.0.1:3000` hoặc `localhost:3000`.
+
+Để ý rằng 127.0.0.1 hoặc localhost lần lượt chính là địa chỉ IP và tên miền của chính máy tính các bạn đang sử dụng, và 3000 chính là sổ cổng chạy dịch vụ web server.
+
+Lúc này đúng theo lý thuyết, web server sẽ tiếp nhận yêu cầu và trả về kết quả.
+
+**Đi sâu hơn vào mã lệnh**
+
+Đây chính là cách lấy phần header trong một gói tin. Ở dưới là mình lấy về thông tin về trình duyệt của người dùng.
+
 ```javascript
 const userAgent = request.headers['user-agent'];
 ```
-
-Đây chính là cách lấy phần header trong một gói tin.
 
 tiếp theo đó là phần xử lý tương ứng với các request vào trên mỗi URL cụ thể.
 
@@ -226,7 +267,7 @@ Mã nguồn của bài học này mình để ở Github với URL là [Create S
 
 
 
-### Tác giả
+# Tác giả
 
 **Name:** Nguyen Huu Quyen ( Nguyễn Hữu Quyền )
 
