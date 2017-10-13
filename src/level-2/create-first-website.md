@@ -3,6 +3,10 @@ Trong bài này mình sẽ giới thiệu cho các bạn cách để khởi tạ
 # 1. Kiến thức cần biết
 
 Để học bài này các bạn nên đọc trước hai bài viết của mình đó là thể nào là một web server và giao thức HTTP là gì.
+
+1) [Giao thức HTTP là gì ? ](https://sociss.edu.vn/courses/nodejs/lesson/giao-thuc-http-la-gi)
+2) [Webserver là gì ?](https://sociss.edu.vn/courses/nodejs/lesson/web-server-la-gi)
+
 Nắm hai khái niệm này các bạn sẽ dễ hiểu bài học đầu tiên này hơn.
 
 
@@ -16,6 +20,11 @@ node -v
 
 Nếu kết quả trả về là version của Node bạn cài đặt thì bạn đã cài thành công nếu không thì bạn hãy xem lại
 bài viết hướng dẫn cài đặt môi trường làm việc của mình.
+
+1) [Hướng dẫn cài đặt Node JS](https://sociss.edu.vn/courses/nodejs/lesson/huong-dan-cai-dat-nodejs)
+2) [Cài đặt công cụ và thiết lập môi trường thực hành với Node JS](https://sociss.edu.vn/courses/nodejs/lesson/cai-dat-cong-cu-va-thiet-lap-moi-truong-thuc-hanh-voi-node-js)
+
+Sau khi có đủ kiến thức nền cần thiết và công cụ rồi thì chúng ta cùng vào bài học chính nào.
 
 # 3. Nội dung
 
