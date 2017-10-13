@@ -205,7 +205,7 @@ response.write('DATA NEED TO TRANSFER');
 response.end();
 ```
 
-# 4 Nhận xét và kết luận
+# 4. Nhận xét và kết luận
 
 Qua bài học trên mình đã giới thiệu cho các bạn cách để tạo một HTTP webserver đơn giản với Module HTTP. Các bạn có thể áp dụng ví dụ trên để xây dựng một webserver đơn giản và nhẹ nhàng (Rất có ích cho các ứng dụng IOT đơn giản), đồng thời cũng giúp bạn hiểu bản chất một HTTP server trực quan hơn.
 
@@ -217,7 +217,7 @@ Thì để khắc phục nhược điểm ấy mình sẽ sử dụng một fram
 
 Bài tiếp theo mình sẽ hướng dẫn cách xây dựng một trang web tĩnh với Express JS.
 
-# 5 Bài tập
+# 5. Bài tập
 
 Trước khi có bài học tiếp theo, các bạn hãy làm lại những ví dụ trên và đọc thêm tài liệu về Module HTTP nếu cần theo URL sau [HTTP Module Node.js](https://nodejs.org/api/http.html).
 
