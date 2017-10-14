@@ -15,7 +15,9 @@ module.exports = {
 * @param  {object} res HTTP response
 */
 function renderHomePage(req, res) {
-  res.send('This is homepage');
+  res.render('homepage', {
+    content : 'This is homepage content'
+  });
 }
 
 /**
@@ -27,5 +29,7 @@ function renderHomePage(req, res) {
 * @param  {object} res HTTP response
 */
 function renderContact(req, res) {
-  res.send('This is contact');
+  res.render('contact', {
+    content : 'This is contact page content'
+  });
 }
