@@ -563,6 +563,7 @@ Mình có bài tập như sau, áp dụng các hướng dẫn trên, viết mộ
 2) Lấy thuộc tính header 'user-agent' ra và hiển thị ra view thông qua template view engine.
 
 
+Mã nguồn của bài học mình để ở Github theo link sau [Socis-blog-v1 Github](https://github.com/nghuuquyen/sociss-class-nodejs/tree/master/src/sociss-blog-v1)
 
 
 # Tác giả
