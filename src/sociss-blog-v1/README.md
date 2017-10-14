@@ -21,6 +21,10 @@ Bài học này chúng ta sẽ bắt tay vào xây dựng một website tĩnh v�
 
 Nếu đây là lần đầu tiên bạn đến với Node.js thì bạn nên xem lại các bài học trước đó tại đây. Vì để bắt đầu phần này bạn cần có kiến thức nền trước.
 
+Bài học liên kết với bài học này là [Tạo HTTP web server với Node.js](https://sociss.edu.vn/courses/nodejs/lesson/tao-http-web-server-voi-nodejs)
+
+Các bạn nên đọc qua bài trên trước để hiểu hơn các từ mình dùng cho bài này, và cũng để hiểu hơn về bản chất bên dưới các framework họ làm cái gì.
+
 
 # 4. Nội dung bài học
 
@@ -299,7 +303,7 @@ sau đó mở trình duyệt lên và chạy thử đường dẫn 127.0.0.1:300
 Thì bạn thấy rằng tương ứng với việc bạn truyền gì gì biến {{content}} mà trang HTML trả về cho người dùng sẽ có nội dung khác nhau. Để làm việc đó dễ dàng với Node.js mình sẽ sử dụng view engine.
 
 
->Nếu không sử dụng view engine thì theo bài học trước trong việc tạo một HTTP web server, các bạn phải sử >dụng các phép nối chuỗi để làm điều này, với ứng dụng nhỏ thì không sao nhưng nếu ứng dụng lớn hơn thì sẽ >rất là mệt và khó quản lý, đặc biệt là khi nội dung trang HTML cực kỳ phức tạp.
+>Nếu không sử dụng view engine thì theo bài học trước trong việc tạo một HTTP web server, các bạn phải sửdụng các phép nối chuỗi để làm điều này, với ứng dụng nhỏ thì không sao nhưng nếu ứng dụng lớn hơn thì sẽ rất là mệt và khó quản lý, đặc biệt là khi nội dung trang HTML cực kỳ phức tạp.
 
 
 Ví dụ nếu không dùng view engine thì bạn sẽ phải làm một cái gì đó như sau. Chú ý mình viết trên ES6 để đỡ khổ , chứ ES5 thì ôi thôi rồi, toàn cộng chuỗi.
