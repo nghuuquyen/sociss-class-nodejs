@@ -1,8 +1,8 @@
 let BaseError = require('./BaseError');
 
-class NotFoundError extends BaseError {
+class InvalidParamError extends BaseError {
   constructor(message, isPublic) {
-    super(message, 404, isPublic);
+    super(message, 400, isPublic);
   }
 }
 
