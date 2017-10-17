@@ -12,10 +12,10 @@ let AuthorCtrl = require('../controllers').Author;
 router.param('author', AuthorCtrl.findOne);
 
 // Public routes
-router.route('/author/:author([a-zA-Z0-9.\-_]{8,30})')
+router.route('/:author([a-zA-Z0-9.\-_]{8,30})')
 .get(AuthorCtrl.renderAuthorPage);
 
-router.route('/author/:author([a-zA-Z0-9.\-_]{8,30})/posts')
+router.route('/:author([a-zA-Z0-9.\-_]{8,30})/posts')
 .get(AuthorCtrl.renderAuthorPostsPage);
 
 module.exports = router;
