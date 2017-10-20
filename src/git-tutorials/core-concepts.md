@@ -1,9 +1,3 @@
-Ý chính
-
-+ tại sao cần git
-+ ý tưởng của git
-+ commit
-+ các khái niệm chính (Branch, add, push, commit, pull, reset , revert )
 
 # 1. Tại sao cần Git ?
 
@@ -66,41 +60,7 @@ Repository của Git được phân thành 2 loại là **remote repository** v�
 
 Thường thì trong quá trình làm việc chúng ta sẽ làm việc trên local repo, tức là lưu trữ trên máy của mình. Khi muốn chia sẽ nó đến người dùng khác khi đã hoàn thành thì sẽ đẩy code (Push) lên Remote repo.
 
-
-# 5. Nhánh (Branch)
-
-Nhánh có thể hiểu như là một không gian làm việc (workspace), Ví dụ khi bạn muốn
-tạo một tính năng A mới bạn sẽ tạo ra một nhánh mới để làm tính năng A. Đồng thời
-trong lúc bạn làm tính năng A thì bạn cũng có thể tạo ra một nhánh mới để sửa lỗi
-cho dự án của mình. Hai không gian làm việc này hoàn toàn không động đến nhau, nên
-dù tính năng A đã làm xong hay chưa đều không ảnh hưởng đến các nhánh (không gian làm việc khác) khác.
-
-Trong một project sẽ luôn có một nhánh chính (mặc định) gọi là **master**. Tính năng được tạo
-ra trong các nhánh phụ sẽ được hợp nhất lại vào master khi đã làm xong, hành động này
-gọi là **merge**
-
-
-# 6. Merge (Trộn)
-
-Merge là hành động khi bạn muốn nhập mã nguồn từ một nhánh khác vào nhánh hiện tại.
-Ví dụ từ nhánh master bạn tạo ra một nhánh là **feature-seo** đây là nhanh phát triển
-tính năng cho việc SEO onpage. Sau khi bạn hoàn tất tính năng này thì bạn sẽ phải merge
-nó vào lại master, vì master là nhánh chính, hiểu là nơi chứa mã nguồn với đầy đủ tính năng
-của cả project. Việc merge sẽ mang tính năng seo đang ở nhánh **feature-seo** vào nhánh **master**
-
-
-# 6. Commit (Lưu chỉ mục)
-
-![Commit history](./images/git-commits.png)
-
-**Commit** là thao tác để **ghi lại** lịch sử việc thêm, thay đổi file hay thư mục vào repository.
-
-Khi thực hiện commit, trong repository sẽ tạo ra commit (hoặc revision) đã ghi lại sự khác biệt từ trạng thái đã commit lần trước với trạng thái hiện tại.
-
-Commit này đang được chứa tại repository, các commit nối tiếp với nhau theo thứ tự thời gian. Bằng việc lần theo commit thì có thể biết được lịch sử thay đổi trong quá khứ.
-
-
-# 7. Git Remote
+# 5. Git Remote
 
 Để kết nối được với một repo khác người ta sử dụng một khái niệm gọi là remote tạm hiểu là
 kết nối từ xa để kết nối đến một remote git server. Là một máy tính trên đó cài phần mềm git
@@ -116,20 +76,105 @@ có thể chia sẽ mã nguồn với nhau dễ dàng mọi thứ sẽ được 
 
 Vì vậy, trước khi sử dụng git thì bạn nên đăng kí một tài khoản trên github.com hoặc bitbucket.org.
 
-# 8. Working tree ( hoặc working directory) và Index (hoặc staging area)
+
+# 6. Commit
+
+![Commit history](./images/git-commits.png)
+
+**Commit** là thao tác để **ghi lại** lịch sử việc thêm, thay đổi file hay thư mục vào repository.
+
+Khi thực hiện commit, trong repository sẽ tạo ra commit (hoặc revision) đã ghi lại sự khác biệt từ trạng thái đã commit lần trước với trạng thái hiện tại.
+
+Commit này đang được chứa tại repository, các commit nối tiếp với nhau theo thứ tự thời gian. Bằng việc lần theo commit thì có thể biết được lịch sử thay đổi trong quá khứ.
+
+# 7. Nhánh (Branch)
+
+![Feature branch](./images/feature-branch.png)
+
+Nhánh có thể hiểu như là một không gian làm việc (workspace), Ví dụ khi bạn muốn
+tạo một tính năng A mới bạn sẽ tạo ra một nhánh mới để làm tính năng A. Đồng thời
+trong lúc bạn làm tính năng A thì bạn cũng có thể tạo ra một nhánh mới để sửa lỗi
+cho dự án của mình. Hai không gian làm việc này hoàn toàn không động đến nhau, nên
+dù tính năng A đã làm xong hay chưa đều không ảnh hưởng đến các nhánh (không gian làm việc) khác.
+
+Trong một project sẽ luôn có một nhánh chính (mặc định) gọi là **master**. Tính năng được tạo
+ra trong các nhánh phụ sẽ được hợp nhất lại vào master khi đã làm xong, hành động này
+gọi là **merge**
+
+# 8. Merge (Trộn)
+
+Merge là hành động khi bạn muốn nhập mã nguồn từ một nhánh khác vào nhánh hiện tại.
+Ví dụ từ nhánh master bạn tạo ra một nhánh là **feature-seo** đây là nhanh phát triển
+tính năng cho việc SEO onpage. Sau khi bạn hoàn tất tính năng này thì bạn sẽ phải merge
+nó vào lại master, vì master là nhánh chính, hiểu là nơi chứa mã nguồn với đầy đủ tính năng
+của cả project. Việc merge sẽ mang tính năng seo đang ở nhánh **feature-seo** vào nhánh **master**
+
+# 9. Working tree và Index (hoặc staging area)
 
 ![Git areas](./images/git-staging-area.png)
 
-Trên Git, những thư mục được đặt trong sự quản lý của Git mà mọi người đang thực hiện công việc trong thực tế được gọi là working directory. Hay nói đơn giản hơn là nhưng tệp tin đang được thay đổi
-mà chưa commit thì gọi là đang ở working tree.
+Trên Git, những thư mục được đặt trong sự quản lý của Git, nơi mà mọi người đang thực hiện công việc trên đó, được gọi là **working tree**.
 
 Giữa repository và working tree tồn tại một nơi gọi là index hay staging area . staging area là nơi để chuẩn bị cho việc commit vào repository.
 
 
-# 9. Add, Pull, Push, Clone
+# 10. Tracked và Untracked
 
-**add** là thao tác đẩy một tệp tin từ working directory vào staging area để chuẩn bị
-cho việc commit.
+Trong git có hai loại trạng thái chính đó là Tracked và Untracked. Nếu bạn muốn commit một tập tin đó, bạn sẽ cần phải đưa tập tin đó vào trạng thái tracked bằng lệnh **git add**.
+
+
+1) **Tracked** – Là tập tin đã được đánh dấu theo dõi trong Git để bạn làm việc với nó. Và trạng thái Tracked nó sẽ có thêm các trạng thái phụ khác là Unmodified (chưa chỉnh sửa gì), Modified (đã chỉnh sửa) và Staged (đã sẵn sàng để commit).
+
+2) **Untracked** – Là tập tin còn lại mà bạn sẽ không muốn làm việc với nó trong Git.
+
+Nhưng nếu tập tin đó đã được Tracked nhưng đang rơi vào trạng thái (Modified) thì nó vẫn sẽ không thể commit được mà bạn phải đưa nó về Staged cũng bằng lệnh git add
+
+
+## Untracked
+
+Nếu bạn tạo ra hoặc thêm vào một tập tin mới vào trong thư mục làm việc của bạn thì nó sẽ ở trạng thái Untracked. muốn cho nó trở thành tracked thì phải dùng lệnh
+git add. Nếu tệp tin đó mới hoàn toàn thì nó sẽ rơi vào trạng thái **staged** và
+bạn có thể commit file đó.
+
+## Tracked
+
+Một khi một tập tin đã được đưa về Tracked thì nó sẽ có thể thay đổi giữa 3 trạng thái khác nhau là Modified, Unmodified và Staged.
+
+
+1) **Unmodified** : File đươc Git quản lý nhưng không có thay đổi gì
+2) **Modified** :File được Git quản lý nhưng đang bị thay đổi, cần dùng lệnh git add để đưa về trạng thái staged
+3) **staged** : File được git quản lý và sẵn sàng cho việc commit.
+
+
+**Chú ý** : Một file đã ở trạng thái Staged mà bạn lại tiếp tục sửa thì nó
+sẽ quay về trạng thái modified, lúc này lại cần git add để xác nhận thay đổi,
+và đưa file quay về trạng thái staged.
+
+# 11. tệp tin .gitignore
+
+.gitignore Là một file cấu hình của git. **Tại khai báo tất cả các file hoặc thư mục mà ta sẽ untracked**. Tức là khai báo những file mà ta không muốn git quản lý, những file này sẽ không bao giờ được commit.
+
+Ứng dụng của file này là để loại bỏ các tệp tin thừa do hệ điều hành, công cụ làm việc sinh ra trong lúc làm việc, những file này không có giá trị nên không bao giờ
+cần phải quản lý bởi Git cả.
+
+
+**Chú ý** : Thường khi làm việc với một công nghệ cụ thể nào đó thì đề có một
+file .gitignore mẫu sẵn rồi. Bạn có thể lên mạng tải về để sử dụng, trong quá trình
+sử dụng bạn có thể thêm vào file này các file đặc biệt mà bạn muốn bỏ ra khỏi Git tương ứng với công việc của bạn.
+
+**Ví dụ** Với ngôn ngữ Java, khi mã nguồn được biên dịch, thì file .class sẽ được sinh ra, nhưng file này lại không cần phải quản lý bởi Git do nó sinh ra từ file
+.java. Nên ta sẽ loại bỏ nó bằng cách khai báo trong .gitignore là
+
+```markup
+*.class
+```
+
+Ở trên nghĩa là bỏ hoàn toàn các file có phần mở rộng là .class.
+
+
+# 12. Add, Pull, Push, Clone
+
+**add** là thao tác đẩy một tệp tin từ working directory vào staging area để chuẩn bị cho việc commit.
 
 **pull** là thao tác lấy mã nguồn từ một hoặc nhiều nhánh cụ thể nào đó ở
 remote server nào đó về  local repository trên máy tính của bạn
@@ -139,8 +184,7 @@ remote server nào đó về  local repository trên máy tính của bạn
 **clone** là thao tác tải mã nguồn từ một remote server về máy tính,chỉ tải
 về máy local repository nhánh master
 
-
-# 10. Conflict (Xung đột)
+# 13. Conflict (Xung đột)
 
 Giả sử ta có file A. Và trong team gồm hai anh chị làm việc ở hai nhánh khác nhau.
 Ví dụ tại dòng số 10 đến 20 của file A. Anh lập trình viên viết vào đó hàm cộng, nhưng chị lập trình viên khác trên một nhánh khác lại viết vào đó hàm trừ.Lúc này khi anh lập trình viên
