@@ -1,3 +1,10 @@
+Chào các bạn trong bài học này, mình muốn giới thiệu đến các bạn công nghệ Git. Git là một công cụ giúp quản lý các phiên bản của mã nguồn, hỗ trợ cho làm việc nhóm một cách hiệu quả.
+
+
+Trong  bài học này, mình sẽ giới thiệu và giải thích tất cả các khái niệm trung tâm và quan trọng nhất khi làm việc với Git. Nắm chắc những khái niệm này thì việc thực hành và đi sâu vào các câu lệnh về Git sẽ vô cùng dễ dàng.
+
+Nào chúng ta cùng đi vào bài học.
+
 
 # 1. Tại sao cần Git ?
 
@@ -25,7 +32,7 @@ Add new feature show about page.
 
 ```
 
-Đó là cách mình quản lý source code của mình vào năm mình học cấp 3. Lúc ấy mình chưa biết GIT là gì, tuy nhiên khi đến lúc làm việc nhóm thì sẽ vô cùng phức tạo vì để chuyển giao mã nguồn cho bạn của mình, thì chỉ có cách nén lại gửi qua email. Việc nén gửi đi tạo ra vô số bạn sao chép gây khó kiểm soát. Kế đến còn có trường hợp cả hai cùng sửa cùng một file nếu copy đè lên sẽ gây mất code của người kia, dần dần mọi việc trở nên hỗn loạn. Và cả nhóm phải đành code trên một máy hoặc share một thư mục chung qua mạng, vất vả vô cùng.
+Đó là cách mình quản lý source code của mình vào năm mình học cấp 3. Lúc ấy mình chưa biết GIT là gì, tuy nhiên khi đến lúc làm việc nhóm thì sẽ vô cùng phức tạo vì để chuyển giao mã nguồn cho bạn của mình, thì chỉ có cách nén lại gửi qua email. Việc nén gửi đi tạo ra vô số bản sao chép gây khó kiểm soát. Kế đến còn có trường hợp cả hai cùng sửa cùng một file nếu copy đè lên sẽ gây mất code của người kia, dần dần mọi việc trở nên hỗn loạn. Và cả nhóm phải đành code trên một máy hoặc share một thư mục chung qua mạng, vất vả vô cùng.
 
 
 Sau này biết đến Git mọi thứ đều thay đổi, việc làm việc nhóm trở nên đơn giản và hiệu quả hơn. Ngay cả công việc code cá nhân cũng trở nên dễ dàng, mình không còn phải sao lưu từng tệp tin nữa.
@@ -45,7 +52,7 @@ Trong mô hình Git sẽ luôn có một server lưu trữ chính để cả tea
 
 # 3. Repository là gì ?
 
-Repository hay được gọi tắt là Repo, đơn giản là nơi chứa tất cả những thông tin cần thiết để quản lý các sửa đổi và lịch sử của toàn bộ project. Tất cả dữ liệu của Repo đèu được chứa trong thư mục bạn đang làm việc dưới dạng folder ẩn có tên là .git
+Repository hay được gọi tắt là Repo, đơn giản là nơi chứa tất cả những thông tin cần thiết để quản lý các sửa đổi và lịch sử của toàn bộ project. Tất cả dữ liệu của Repo đều được chứa trong thư mục bạn đang làm việc dưới dạng folder ẩn có tên là .git
 
 Nên bạn phải chú ý không được xóa thư mục này đi, nếu không sẽ mất thông tin quan trọng.
 
@@ -54,7 +61,7 @@ Nên bạn phải chú ý không được xóa thư mục này đi, nếu không
 
 Repository của Git được phân thành 2 loại là **remote repository** và **local repository**.
 
-+ **Remote repository**: Là repository dùng để chia sẻ giữa nhiều người và bố trí trên server chuyên dụng.
++ **Remote repository**: Là repository dùng để chia sẽ giữa nhiều người và bố trí trên server chuyên dụng.
 
 + **Local repository**: Là repository ở trên máy tính của chính bản thân mình, dành cho một người dùng sử dụng.
 
@@ -63,7 +70,7 @@ Thường thì trong quá trình làm việc chúng ta sẽ làm việc trên lo
 # 5. Git Remote
 
 Để kết nối được với một repo khác người ta sử dụng một khái niệm gọi là remote tạm hiểu là
-kết nối từ xa để kết nối đến một remote git server. Là một máy tính trên đó cài phần mềm git
+kết nối từ xa đến một remote git server. Là một máy tính trên đó cài phần mềm git
 server để quản lý source code. Tai đây chúng ta có thể thực hiện các thao tác như
 đẩy (push), kéo (pull) , nhân bản (clone) . Tuy nhiên thường thì không phải máy tính
 ai cũng cài đặt git server và đảm bảo hoạt động ổn định 24/24, nên thường là người ta
@@ -113,7 +120,7 @@ của cả project. Việc merge sẽ mang tính năng seo đang ở nhánh **fe
 
 ![Git areas](./images/git-staging-area.png)
 
-Trên Git, những thư mục được đặt trong sự quản lý của Git, nơi mà mọi người đang thực hiện công việc trên đó, được gọi là **working tree**.
+Trên Git, những thư mục được đặt trong sự quản lý của Git, để mọi người thực hiện công việc trên đó, được gọi là **working tree**.
 
 Giữa repository và working tree tồn tại một nơi gọi là index hay staging area . staging area là nơi để chuẩn bị cho việc commit vào repository.
 
@@ -159,8 +166,8 @@ cần phải quản lý bởi Git cả.
 
 
 **Chú ý** : Thường khi làm việc với một công nghệ cụ thể nào đó thì đề có một
-file .gitignore mẫu sẵn rồi. Bạn có thể lên mạng tải về để sử dụng, trong quá trình
-sử dụng bạn có thể thêm vào file này các file đặc biệt mà bạn muốn bỏ ra khỏi Git tương ứng với công việc của bạn.
+file .gitignore mẫu sẵn, bạn có thể lên mạng tải về để sử dụng, trong quá trình
+sử dụng bạn có thể thêm vào file .gitignore các file đặc biệt mà bạn muốn bỏ ra khỏi Git tương ứng với công việc của bạn.
 
 **Ví dụ** Với ngôn ngữ Java, khi mã nguồn được biên dịch, thì file .class sẽ được sinh ra, nhưng file này lại không cần phải quản lý bởi Git do nó sinh ra từ file
 .java. Nên ta sẽ loại bỏ nó bằng cách khai báo trong .gitignore là
@@ -196,3 +203,14 @@ Vậy Conflic là trường hợp có 2 sự thay đổi trong cùng một hay n
 Để giải quyết mâu thuẫn bạn phải dùng “tay" hay ám chỉ tự xử, để sữa các xung đột này. Bạn đơn giản chỉ việc nhìn vào file bị conflict cùng với các cộng sự của mình để tự quyết định dòng code nào giữ lại, dòng nào xóa bỏ hay phối hợp với nhau.
 
 Như ví dụ trên, khi xảy ra xung đột, lúc này để giải quyết hai anh chị lập trình viên phải ngồi với nhau để sắp xếp lại hai function đúng vị trí trong file A. Và đó gọi là giải quyết xung đột.
+
+
+# Tác giả
+
+**Name:** Nguyen Huu Quyen ( Nguyễn Hữu Quyền )
+
+**Email:** nghuuquyen@gmail.com
+
+**Website:** [Sociss Class - Online Education Center](https://sociss.edu.vn/)
+
+**Profile Page:** [Nguyen Huu Quyen - Profile Page ](https://sociss.edu.vn/users/nghuuquyen)
