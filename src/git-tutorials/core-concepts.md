@@ -91,7 +91,7 @@ của cả project. Việc merge sẽ mang tính năng seo đang ở nhánh **fe
 
 # 6. Commit (Lưu chỉ mục)
 
-![Commit history](/images/git-commits.png)
+![Commit history](./images/git-commits.png)
 
 **Commit** là thao tác để **ghi lại** lịch sử việc thêm, thay đổi file hay thư mục vào repository.
 
@@ -118,7 +118,7 @@ Vì vậy, trước khi sử dụng git thì bạn nên đăng kí một tài kh
 
 # 8. Working tree ( hoặc working directory) và Index (hoặc staging area)
 
-![Git areas](/images/git-staging-area.png)
+![Git areas](./images/git-staging-area.png)
 
 Trên Git, những thư mục được đặt trong sự quản lý của Git mà mọi người đang thực hiện công việc trong thực tế được gọi là working directory. Hay nói đơn giản hơn là nhưng tệp tin đang được thay đổi
 mà chưa commit thì gọi là đang ở working tree.
