@@ -1,7 +1,6 @@
 Chào các bạn đây là bài học đầu tiên của chúng ta với Git. Trong bài học này chúng
 ta sẽ học bằng một câu chuyện kể về một nhóm gồm 3 bạn là Minh, Linh và Vũ (Team DevStory) có một dự án làm một trang web tính toán đơn giản bằng HTML và Javascript. Với bạn Minh là trưởng nhóm. Và câu chuyện bắt đầu.
 
-
 Vào một ngày đẹp trời, sau khi cả ba đã thống nhất về ý tưởng xây dựng một ứng dụng
 đơn giản với các tính năng yêu cầu trong Sprint 1 theo mô hình Scrum là
 
@@ -256,7 +255,7 @@ Writing objects: 100% (3/3), 242 bytes | 0 bytes/s, done.
 Total 3 (delta 0), reused 0 (delta 0)
 To https://github.com/nghuuquyen/simple-calculator.git
  * [new branch]      master -> master
-``
+```
 
 Sau khi gõ lệnh bạn sẽ phải nhập username và password (Chú ý nó là ẩn không hiện lên nên bạn cứ gõ mật khẩu đúng vào và enter nhé).
 
@@ -265,3 +264,215 @@ Sau khi gõ lệnh bạn sẽ phải nhập username và password (Chú ý nó l
 remote master.
 
 Lúc này mở github lên ở đường dẫn của remote repo và reload lại. Bạn sẽ thấy mã nguồn của mình đã ở trên github.
+
+
+Cuối cùng để thử lấy tất cả các nhánh trên remote repo về, bạn dùng lệnh `git fetch`. và sau đó thử xem lệnh `git branch`
+
+```sh
+git fetch
+git branch
+* master
+```
+
+Và kết quả trả về là bạn đang ở trên nhánh master. Để kiểm tra tình trạng các nhánh ở local với master bạn dùng lệnh `git remote show origin`
+
+```sh
+git remote show origin
+* remote origin
+  Fetch URL: https://github.com/nghuuquyen/simple-calculator.git
+  Push  URL: https://github.com/nghuuquyen/simple-calculator.git
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+```
+
+Kết quả trả về là sẽ liệt kê danh sách tất cả các remote và repo cho mỗi remote tương ứng, trong remote origin các bạn để ý là nhánh master ở local đã ghi là `up to date` nghĩa là đã là bản mới nhất so với nhánh master ở trên remote repo. Vậy là code trên nhanh của bạn đã là mới nhất rồi. Thường thì lệnh này để bạn có cái nhìn tổng quát về  thay đổi ở tất cả các nháy nếu có để cập nhật code về.
+
+Giả sử nếu có thay đổi bạn có thể cập nhật tất cả bằng lệnh `git fetch`.
+
+
+# 7. Một bạn khác trong team tải mã nguồn về để làm việc
+
+Sau khi xong bước trên, thì đến bước này bạn trưởng nhóm Minh, sẽ rút điện thoại ra nói mọi người là mình đã đẩy code lên github rồi, mọi người lên lấy về xem nhé.
+
+
+Vậy làm sao để một bạn khác trong team lấy được mã nguồn về  ?
+
+Rất đơn giản, ta sẽ dùng lệnh `git clone`
+
+Để giả lập việc này, bạn có thể tạo một thư mục nào đó ở ngoài thư mục **working directory** hiện tại của project mà bạn đang làm việc để thử việc clone.
+
+Ví dụ mình tạo mới một thư mục là **test-clone-app** để giải sử cho việc minh đang ở một máy tính khác. Bạn vào thư mục mới tạo này, mở terminal lên và gõ vào đó lệnh sau.
+
+```sh
+git clone https://github.com/nghuuquyen/simple-calculator.git
+```
+
+Và kết quả là
+
+```sh
+Cloning into 'simple-calculator'...
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+```  
+
+Để ý ta thấy rằng theo sau lệnh git clone chính là URL của remote repo trên github.
+
+Sau khi clone thành công thì bạn đã có source code của project mà trưởng nhóm Minh đã tạo để làm việc rồi. Toàn bộ source code của project sẽ ở trong thư mục
+**/test-clone-app/simple-calculator**
+
+
+# 8. Làm thể nào để một bạn khác trong Team có thể đẩy code lên remote repo
+
+Mặc định ban đầu chỉ người tạo repo mới có thể tự do đẩy code lên repo mình tạo. Để một bạn khác có thể đẩy code của mình làm vào remote repo thì có hai cách.
+
+1) Thêm bạn ấy vào danh sách người dùng được cấp phép đẩy code vào remote repo.
+2) Bạn kia phải folk ra một repo khác và tự đẩy code lên repo của mình, sau đó tạo pull request về remote repo gốc.
+
+Ở trên thì cách 2 là cách nâng cao, thường dùng cho các open source project để cộng đồng có thể đóng góp cho một project, mình sẽ bàn đến ở bài học khác. Ở bài này mình chọn cách dễ nhất đó là bạn Minh trưởng nhóm sẽ cấp quyền push code cho các member của mình là Linh và Vũ.
+
+
+Để có thể cấp quyền cho người dùng khác vào repo của mình trên github các bạn làm
+như sau
+
+1) Vào trang chủ repo của mình (Khi đã đăng nhập vào tài khoản tạo ra repo ấy).
+2) Vào tab settings --> Mở thẻ Collaborators --> Nhập lại mật khẩu nếu bị yêu cầu
+3) Điền vào ô username hoặc email của team member và nhấn vào nút add.
+4) Gọi điện thoại nói team member đăng nhập email đã đăng ký với github để chấp thuận yêu cầu.
+5) Sau khi member kia chấp thuận yêu cầu member đó đã có quyền đẩy code lên repo
+
+Việc quản lý thành viên trong repo, bạn có thể quản lý trong settings/Collaborators
+
+
+Tới đây là bạn đã cấp quyền thành công, giờ tiếp theo là chúng ta thử nghiệm đẩy code lên remote repo với tài khoản khác xem nào.
+
+
+# 9. Làm việc với remote repo trên tài khỏan của thành viên (Collaborators)
+
+Giờ chúng ta lại vào thư mục test-clone-app đã tạo ở trước để giả lập việc,làm việc
+ở một máy tính của bạn khác, trên tài khỏa github của bạn ấy.
+
+Giả sử ở đây là bạn Linh,
+
+Đầu tiên vào lại thư mục test-clone-app và mở terminal lên. di chuyển đến thư mục project bằng lệnh `cd /simple-calculator`. Thử kiểm tra lệnh `git branch` nếu trả
+về là master tức là bạn đã ở đúng thư mục project.
+
+Lúc này bạn thử tạo một thư mục css và tạo file style.css ở thư mục đó
+
+```sh
+.
+├── css
+│   └── style.css
+├── index.html
+└── README.md
+```
+
+Cấu trúc thư mục sẽ như sau, Sau đó bạn sẽ dùng lệnh git add để đẩy file vào trạng thái staged.
+
+```sh
+git add css/style.css
+```
+
+Chú ý để add tất cả các file và thư mục đang được tracked hoặc những tệp tin mới tạo thì bạn có thể dùng lệnh `git add .`. Ở ví dụ của Minh, dù đã tạo thư mục css và js nhưng chưa add vào cho git biết nên lúc commit hai thư mục này sẽ không được thêm vào, đó là lý do là lúc này ở máy tính của bạn khác, ta clone về sẽ không thấy hai thư mục này.
+
+
+Sau khi đã add thì ta commit code.
+
+```sh
+git commit -m "Create style.css for homepage"
+[master 63e81ec] Create style.css for homepage
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 css/style.css
+```
+
+và cuối cùng là `git push` để đẩy code lên nhánh master ở remote repo trên github.
+
+```sh
+git push origin master
+Username for 'https://github.com': sociss-education
+Password for 'https://sociss-education@github.com':
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 351 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/nghuuquyen/simple-calculator.git
+   d1a1956..63e81ec  master -> master
+```
+
+mình dùng lệnh `git push origin master`, và tài khoản mình dùng là **sociss-education** đay là tài khoản mà mình đã cấp quyền. Và như trên code đã được đẩy lên thành công từ tài khoản sociss-education.
+
+
+Mở github lên và kiểm tra,lúc này chắc chắn bạn sẽ thấy cập nhật mới nhất có tệp tiên css/stylt.css
+
+
+# 10. Thiết lập thông tin cá nhân chủ sở hữu cho local repo
+
+Lúc này có một điều đặc biệt mà các bạn có thể thấy là nếu sử dụng lệch `git log`
+
+bạn sẽ thấy lịch sử như sau.
+
+
+```sh
+git log
+commit 63e81ec01f9cbf36c60bb69a8dc4deeb285e946e
+Author: Quyen Nguyen Huu <nghuuquyen@gmail.com>
+Date:   Sat Oct 21 15:42:51 2017 +0700
+
+    Create style.css for homepage
+
+commit d1a1956b1c06ac95201726c9aa5a457db492cf01
+Author: Quyen Nguyen Huu <nghuuquyen@gmail.com>
+Date:   Sat Oct 21 14:31:41 2017 +0700
+
+    Initial project struct
+
+```
+
+Để ý commit mới nhất là **Create style.css for homepage** lại ghi là tác giả là
+Quyen Nguyen Huu <nghuuquyen@gmail.com> dùng cho mình đăng nhập và commit bằng tài
+khoản **sociss-education**. Nguyên do là vì do **git config** của máy tính bạn đang cài mặc định tài khoản Git cho máy tính này là Quyen Nguyen Huu và địa chỉ email là nghuuquyen@gmail.com
+
+Để thay đổi thì bạn sẽ chạy lần lượt hai lệnh sau nhưng thay vào đó tên và email của bạn nhé.
+
+```sh
+git config --global user.name "Nguyen Huu Quyen"
+git config --global user.email nghuuquyen@gmail.com
+```
+
+Và khi đó mọi commit sau này sẽ lấy thông tin tác giả là theo thiết lập đó.
+
+
+
+# Kết luận và nhận xét
+
+Qua bài học này mình đã hướng dẫn được cho các bạn các nội dung sau
+
+1) Cách tạo một repository trên github
+2) Cách thực hành lệnh clone, commit, add, branch và push
+3) Cách cấp quyền cho một tài khoản để đẩy code lên remote repo github
+
+
+Trong bài học tiếp theo mình sẽ hướng dẫn cách làm việc trên các nhánh khác nhau để
+thực hiện các task mà mình đã chia ra ở đầu bài. Các bài học này sẽ liên kết với nhau nhé.
+
+
+# Bài tập về nhà
+
+Hãy đọc theo nội dung bài học và thử tạo một repo riêng cho mình, và tìm hiểu trước
+cách tạo nhánh và merge để chuẩn bị cho bài học sau.
+
+
+# Tác giả
+
+**Name:** Nguyen Huu Quyen ( Nguyễn Hữu Quyền )
+
+**Email:** nghuuquyen@gmail.com
+
+**Website:** [Sociss Class - Online Education Center](https://sociss.edu.vn/)
+
+**Profile Page:** [Nguyen Huu Quyen - Profile Page ](https://sociss.edu.vn/users/nghuuquyen)
