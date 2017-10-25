@@ -32,7 +32,7 @@ Phần đầu gồm những kỹ thuật căn bản trên nhánh, phần thứ h
 11) Khôi phục lại local branch về trạng thái trước đó
 
 
-## 2. Phần 2: Nâng cao
+## Phần 2: Nâng cao
 
 1) Merge branch.
 
@@ -44,7 +44,7 @@ Phần đầu gồm những kỹ thuật căn bản trên nhánh, phần thứ h
 
 # Phần 1. Căn bản
 
-## 1. Tạo mới một nhánh
+# 1. Tạo mới một nhánh
 
 Để tạo mới một nhánh đơn giản là dùng lệnh `git checkout`. Khi thực hiện lệnh này trên nhánh nào, thì nhánh mới sẽ giống hoàn toàn nhánh đó. Tham số -b trong lệnh checkout là để chỉ việc tạo mới một nhánh.
 
@@ -60,7 +60,7 @@ git checkout -b new_branch
 Kết quả là new_branch sẽ có code và lịch sử giống hoàn toàn với master.
 
 
-## 2. Liệt kê danh sách các nhánh
+# 2. Liệt kê danh sách các nhánh
 
 Để liệt kê danh sách các nhánh ta dùng lệnh `git branch`. Kết quả trả về là toàn bộ các nhánh có trong repo. Trong đó nhánh có dấu hoa thị `*` là nhánh hiện tại ta đang đứng.
 
@@ -77,7 +77,7 @@ git branch
 Như trên là ta đang ở nhánh master.
 
 
-## 3. Chuyển đổi qua lại giữa các branch
+# 3. Chuyển đổi qua lại giữa các branch
 
 Để chuyển đổi qua lại giữa các nhánh, ta dùng lệnh `git checkout TÊN_NHÁNH`. Chú ý là không có tham số -b nhé.
 
@@ -92,7 +92,7 @@ git checkout master
 Switched to branch 'master'
 ```
 
-## 4. Chuyển đổi giữa branch nhưng bị yêu cầu commit code
+# 4. Chuyển đổi giữa branch nhưng bị yêu cầu commit code
 
 Trong trường hợp bạn chuyển sang nhánh mới khi đang code dang dở, thì sẽ bị yêu cầu commit code, tuy nhiên không phải lúc nào bạn cũng muốn commit code cả. Có một cách là sẽ đẩy toàn bộ working tree hiện tại vào stash bằng lệnh `git stash`. Sau đó khi muốn lấy lại working tree đang làm thì dùng lệnh `git stash pop` để lấy ra.
 
@@ -107,7 +107,7 @@ git checkout master
 git stash pop
 ```
 
-## 5. So sánh thay đổi giữa các branch
+# 5. So sánh thay đổi giữa các branch
 
 Nếu bạn muốn so sách các commit hoặc các file khác biệt giữa hai nhánh bất kỳ thì dùng lệnh `git diff`.
 
@@ -125,7 +125,7 @@ Nếu chỉ muốn xem tên những file khác nhau ở hai nhánh thì dùng th
 git diff master dev --name-only
 ```
 
-## 6. Đẩy mã nguồn một local branch lên remote branch
+# 6. Đẩy mã nguồn một local branch lên remote branch
 
 Cái này đơn giản là ta checkout đến nhánh muốn đẩy, commit code xong rồi push lên remote origin thôi.
 Ví dụ
@@ -141,7 +141,7 @@ git push origin master
 
 Code trên nhảy đến nhánh master sẽ đẩy lên nhánh master ở remote origin.
 
-## 7. Cập nhật local branch với thay đổi ở remote branch
+# 7. Cập nhật local branch với thay đổi ở remote branch
 
 Khi hai người cùng làm việc trên một nhánh, việc người này phải cập nhật code mới của người kia là điều bình thường. Để làm việc này dùng lệnh `git pull`.
 
@@ -171,7 +171,7 @@ Lúc này bạn luôn phải nhập merge commit message cho lần pull đó.
 **Nhược điểm**: Sẽ gom các commit con lại thành một, nên khi bị lỗi phải gỡ bỏ, thì phải gỡ luôn cả cục đi. Đôi khi phải gỡ đi cả những tính năng chạy được. Vì vậy nên khi commit và tạo pull request thì nên tạo theo một tính năng cụ thể, tránh hỗn hợp lộn xộn.
 
 
-## 8. Tạo mới nhánh tại một commit cụ thể
+# 8. Tạo mới nhánh tại một commit cụ thể
 
 Trường hợp bạn muốn tạo ra một nhánh có code tương ứng với một commit nào đó. Thì giải pháp là bạn sẽ tạo ra một nhánh mới với **HEAD trỏ tới commit hoặc một tag** cụ thể nào đó.
 
@@ -196,7 +196,7 @@ Sau đó bạn sẽ có một nhánh mới tên là **old-dev** có mã nguồn 
 Phần thao tác với Tag để quản lý phiên bản và mô hình phân nhánh tiêu chuẩn cho Git mình sẽ viết ở bài học khác.
 
 
-## 9. Xóa nhánh
+# 9. Xóa nhánh
 
 Để xóa một nhánh thì đơn giản là bạn dùng câu lệnh `git branch -d TÊN_NHÁNH` để xóa một nhánh bất kỳ.
 
@@ -222,7 +222,7 @@ Câu lệnh trên sẽ xóa nhánh dev nếu thỏa hai điều trên. Trong đ�
 -> Khi bạn biết chắc chắn code trên nhánh bạn muốn xóa không có giá trị gì hết, nên không cần thiết phải đồng bộ lên remote hay merge gì cả. Thường là nhánh tạo ra để thử nghiệm cái gì đó thôi, xong rồi thì xóa đi.
 
 
-## 10. Phục hồi branch sau khi đã xóa
+# 10. Phục hồi branch sau khi đã xóa
 
 Việc lỡ tay hay do nhầm lẫn mà xóa một branch là chuyện bình thường, trong trường hợp này vẫn có thể cứu được nếu còn reflog. Các bước như sau
 
@@ -257,10 +257,9 @@ git checkout -b old-master cbc2046
 ```
 
 
-## 11. Khôi phục lại local branch về trạng thái trước đó
+# 11. Khôi phục lại local branch về trạng thái trước đó
 
 **Video hướng dẫn**
-
 
 Đây là trường hợp khi bạn làm một thời gian, thì thấy các commit gần đây hoàn toàn sai lầm, và muốn xóa bỏ hết tất và quay lại một trạng thái commit trước đó trong trường hợp là các **commit lỗi này chưa đươc đẩy lên remote repo**. Thì bạn sẽ dùng `git reset` theo các bước sau.
 
@@ -287,7 +286,7 @@ Với câu lệnh trên, nhánh dev sẽ quay ngược về đúng trạng thái
 
 # Phần 2. Nâng cao
 
-## 1. Merge branch
+# 1. Merge branch
 
 
 Cái này áp dụng khi bạn checkout ra một branch mới để làm một tính năng, sau khi làm xong thì bạn sẽ nhập tính năng đó về lại nhánh chính.
@@ -314,13 +313,13 @@ git merge feature-homepage
 Và lúc này màn hình Vim đòi bạn nhập message cho lần merge sẽ nhập lên, bạn có thể chỉnh sửa hoặc tắt đi bằng Ctrl + x thì nó sẽ tự để mặc định. Và việc merge đã hoàn thành.
 
 
-## 2. Xử lý xung đột trên branch khi merge.
+# 2. Xử lý xung đột trên branch khi merge.
 
 Khi cả hai nhánh đều cùng chỉnh sửa một tệp tin nào đó, thì lúc merge với nhau sẽ gây xung đột.
 
 **Video hướng dẫn**
 
-### 2.1 Tạo ra xung đột
+## 2.1 Tạo ra xung đột
 
 Đầu tiên chúng ta sẽ **thử thực hành tạo ra một xung đột giữa hai nhánh** theo các bước sau.
 
@@ -385,7 +384,7 @@ U = updated but unmerged ( Cập nhật mà không merge được)
 Nên UU nghĩa là : unmerged, both modified ( Cả hai đều cập nhật và không merge được)
 
 
-### 2.2 Giải quyết xung đột
+## 2.2 Giải quyết xung đột
 
 Tiếp theo, chúng ta **tiến hành giải quyết xung đột như sau**.
 
@@ -423,7 +422,7 @@ git commit -m "Merge branch 'dev'"
 Lúc này đã giải quyết xung đột xong và merge hoàn tất.
 
 
-## 3.Phục hồi trạng thái của branch nếu merge thất bại.
+# 3.Phục hồi trạng thái của branch nếu merge thất bại.
 
 
 Sẽ có lúc bạn bị xung đột nhưng không thể giải quyết được ngay lúc đó, hoặc bạn không thể giải quyết mà đã lỡ gọi lệnh merge, thì để khôi phục lại trạng thái ban đầu rất đơn giản. Dùng lệnh `git merge --abort` hoặc lệnh `git reset` đều được.
@@ -446,7 +445,7 @@ git reset --hard
 **Lưu ý** : Mình dùng --hard vì mình biết rằng, trước khi bạn merge code thì nếu working tree không Clean (rỗng) thì Git đã ép bạn commit hoặc đẩy vào stash trước rồi. Nên dùng --hard để clean sạch index và working tree sinh ra trong lúc merge thất bại là hợp lý nhất.
 
 
-## 4. Phục hồi lại remote branch nếu phát hiện có lỗi trong commit đã push.
+# 4. Phục hồi lại remote branch nếu phát hiện có lỗi trong commit đã push.
 
 Đây là một trường hợp mà khi bạn đã lỡ push code lên remote repo mà lại phát hiện ra lỗi. Lúc này sẽ có hai trường hợp.
 
@@ -456,7 +455,7 @@ git reset --hard
 
 
 
-### 4.1 Trường hợp chưa có ai pull, push code hoặc nhánh remote đó chỉ của riêng bạn dùng
+## 4.1 Trường hợp chưa có ai pull, push code hoặc nhánh remote đó chỉ của riêng bạn dùng
 
 
 Trong trường hợp này có hai cách giải quyết.
@@ -499,7 +498,7 @@ Cách này thì rất bình thường, bạn cứ ung dung fix lỗi rồi đẩ
 **Bước 3**: Push code lên lại , lúc này push **không cần tham số -f** nhé.
 
 
-### 4.2 Đã có ai đó pull code hoặc push code lên nhánh ấy
+## 4.2 Đã có ai đó pull code hoặc push code lên nhánh ấy
 
 Trong trường hợp này có hai cách giải quyết,
 
