@@ -292,13 +292,13 @@ Với câu lệnh trên, nhánh dev sẽ quay ngược về đúng trạng thái
 
 ### 1. Merge branch
 
-**Video hướng dẫn**
+**Gif hướng dẫn**
 
 Cái này áp dụng khi bạn checkout ra một branch mới để làm một tính năng, sau khi làm xong thì bạn sẽ nhập tính năng đó về lại nhánh chính.
 
 Trong phần 1 này mình giả sử không có xung đột nào hết, thì bạn làm như sau
 
-**Bước 1** Di chuyển đến nhánh cần đích cần merge code từ nhánh tính năng vào
+**Bước 1**: Di chuyển đến nhánh cần đích cần merge code từ nhánh tính năng vào
 
 Ví dụ bạn đang ở nhánh feature-homepage để làm trang chủ, và đã xong. Lúc này bạn muốn merge code về nhánh master thì bạn sẽ checkout về nhánh master.
 
@@ -306,7 +306,7 @@ Ví dụ bạn đang ở nhánh feature-homepage để làm trang chủ, và đ�
 git checkout master
 ```
 
-**Bước 2** Chạy lệnh git merge
+**Bước 2**: Chạy lệnh git merge
 
 Giả sử như trên là bạn muốn merge nhánh feature-homepage vào master thì từ nhánh master bạn chạy lệnh sau
 
@@ -322,7 +322,7 @@ Khi cả hai nhánh đều cùng chỉnh sửa một tệp tin nào đó, thì l
 
 **Video hướng dẫn**
 
-#### Phần I - Tạo ra xung đột
+### 2.1 Tạo ra xung đột
 
 Đầu tiên chúng ta sẽ **thử thực hành tạo ra một xung đột giữa hai nhánh** theo các bước sau.
 
@@ -387,7 +387,7 @@ U = updated but unmerged ( Cập nhật mà không merge được)
 Nên UU nghĩa là : unmerged, both modified ( Cả hai đều cập nhật và không merge được)
 
 
-#### Phần II - Giải quyết xung đột
+### 2.2 Giải quyết xung đột
 
 Tiếp theo, chúng ta **tiến hành giải quyết xung đột như sau**.
 
@@ -425,6 +425,8 @@ git commit -m "Merge branch 'dev'"
 Lúc này đã giải quyết xung đột xong và merge hoàn tất.
 
 
+
+
 ### 3.Phục hồi trạng thái của branch nếu merge thất bại.
 
 
@@ -441,6 +443,8 @@ git reset --hard
 **Lưu ý** : Mình dùng --hard vì mình biết rằng, trước khi bạn merge code thì nếu working tree không Clean (rỗng) thì Git đã ép bạn commit hoặc đẩy vào stash trước rồi. Nên dùng --hard để clean sạch index và working tree sinh ra trong lúc merge thất bại là hợp lý nhất.
 
 
+
+
 ### 4. Phục hồi lại remote branch nếu phát hiện có lỗi trong commit đã push.
 
 **Video hướng dẫn**
@@ -452,15 +456,16 @@ git reset --hard
 2) Đã có ai đó pull code hoặc push code lên nhánh ấy.
 
 
-#### Phần I. Trường hợp chưa có ai pull, push code hoặc nhánh remote đó chỉ của riêng bạn dùng
+
+### 4.1 Trường hợp chưa có ai pull, push code hoặc nhánh remote đó chỉ của riêng bạn dùng
 
 Trong trường hợp này có hai cách giải quyết.
 
 **Cách 1: Ghi đè để khôi phục lại nhánh remote (Nguy hiểm)**
 
-1) **Bước 1** : Lưu working tree hiện tại nếu có bằng cách commit hoặc git stash.
+**Bước 1** : Lưu working tree hiện tại nếu có bằng cách commit hoặc git stash.
 
-1) **Bước 2** : Trên nhánh bị lỗi, khôi phục lại code đến commit không bị lỗi bằng `git reset --hard`
+**Bước 2** : Trên nhánh bị lỗi, khôi phục lại code đến commit không bị lỗi bằng `git reset --hard`
 
 Mở log hoặc reflog tìm lại đến commit không bị lỗi, giả dụ là **A**. Thì lúc này bạn sẽ reset nhánh về commit đó bằng lệnh sau.
 
@@ -471,7 +476,7 @@ git reset --hard A
 Thay A bằng commit ID bạn chọn.
 
 
-2) **Bước 3** : Tiến hành push lên nhánh trên origin với tham số `-f`
+**Bước 3** : Tiến hành push lên nhánh trên origin với tham số `-f`
 
 ```sh
 git push orgin [branch_name] -f
@@ -493,7 +498,7 @@ Cách này thì rất bình thường, bạn cứ ung dung fix lỗi rồi đẩ
 **Bước 3**: Push code lên lại , lúc này push **không cần tham số -f** nhé.
 
 
-#### Phần 2. Đã có ai đó pull code hoặc push code lên nhánh ấy
+### 4.2 Đã có ai đó pull code hoặc push code lên nhánh ấy
 
 Trong trường hợp này có hai cách giải quyết,
 
